@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <title>5 хуудсын танилцуулга</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav {
+            width: 200px;
+            height: 100vh; 
+            padding-top: 20px;
+            box-sizing: border-box;
+        }
+
+        nav table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        nav td {
+            border: 1px solid #121111;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgb(26, 25, 25);
+            font-weight: bold;
+            display: block;
+        }
+
+        nav a:hover {
+            color: #391bbc;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <table>
+            <tr><td><a href="#" onclick="showPage('home')">Нүүр</a></td></tr>
+            <tr><td><a href="#" onclick="showPage('about')">Миний тухай</a></td></tr>
+            <tr><td><a href="#" onclick="showPage('family')">Миний гэр бүл</a></td></tr>
+            <tr><td><a href="#" onclick="showPage('friends')">Найзууд</a></td></tr>
+            <tr><td><a href="#" onclick="showPage('contact')">Холбоо барих</a></td></tr>
+        </table>
+    </nav>
+
+    <div class="content">
+
+        <div id="home" class="page active">
+            <h2>Нүүр хуудас</h2>
+            <p>Cайн бну.</p>
+        </div>
+
+        <div id="about" class="page">
+            <h2>Миний тухай</h2>
+
+            <img src="D:\Screenshots\Screenshot 2024-09-15 164152.png" alt="Миний зураг" style="width:200px; border-radius:10px; float:left; margin-right:20px;">
+
+            <header>
+                <h1>Б.Бат-Өрнөх</h1>
+            </header>
+
+            <div class="container">
+                <div class="section">
+                    <h2>Намтар</h2>
+                    <p>Би компьютерийн ухааны оюутан бөгөөд вэб хөгжүүлэлт, алгоритм, шинэ технологи сурах сонирхолтой.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Боловсрол</h2>
+                    <ul>
+                        <li>Компьютерийн ухааны бакалавр – Монгол Улсын Их Сургууль (2022–2026)</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Ур чадвар</h2>
+                    <ul>
+                        <li>Програмчлал: C, C++, Python</li>
+                        <li>Вэб хөгжүүлэлт: HTML, CSS, JavaScript</li>
+                        <li>Өгөгдлийн сан: MySQL</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Туршлага</h2>
+                    <ul>
+                        <li>Tech Company-д дадлагажигч – Вэбсайт хийх болон өгөгдлийн сан удирдахад тусалсан.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Хобби</h2>
+                    <p>Шатар, Тех блог унших, Хөлбөмбөг тоглох</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="family" class="page">
+    <h2>Миний гэр бүл</h2>
+
+    <img src="D:\Screenshots\flat-design-family-symbol_23-2149282971.jpg" alt="Миний гэр бүл" 
+         style="width:300px; border-radius:10px; float:left; margin-right:20px; margin-bottom:10px;">
+
+    <table border="1" cellpadding="10" cellspacing="0" 
+           style="border-collapse: collapse; width: 70%; margin-top: 10px;">
+        <thead>
+            <tr style="background-color: #9ce36a; color: white;">
+                <th>Гишүүн</th>
+                <th>Нэр</th>
+                <th>Мэргэжил / Тайлбар</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Аав</td>
+                <td>Батаахүү</td>
+                <td>Цахилгааны инженер</td>
+            </tr>
+            <tr>
+                <td>Ээж</td>
+                <td>Золзаяа</td>
+                <td>Нягтлан</td>
+            </tr>
+            <tr>
+                <td>Том дүү</td>
+                <td>Бат-Очир</td>
+                <td>Дунд анги</td>
+            </tr>
+            <tr>
+                <td>Бага дүү</td>
+                <td>Алтан-Очир</td>
+                <td>Цэцэрлэг</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+        <div id="friends" class="page">
+            <h2>Найзууд</h2>
+            <p>Миний ойрын найзууд:</p>
+
+            <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 80%; margin-top: 10px;">
+                <thead>
+                    <tr style="background-color: #6a93ae; color: white;">
+                        <th>Нэр</th>
+                        <th>Нас</th>
+                        <th>Мэргэжил</th>
+                        <th>Since</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Энх-Эрдэнэ</td>
+                        <td>20</td>
+                        <td>Механик</td>
+                        <td>2015</td>
+                    </tr>
+                    <tr>
+                        <td>Цэндпүрэв</td>
+                        <td>21</td>
+                        <td>Онцгой...</td>
+                        <td>2010</td>
+                    </tr>
+                    <tr>
+                        <td>Цэрэндагва</td>
+                        <td>21</td>
+                        <td>Механик</td>
+                        <td>2010</td>
+                    </tr>
+                    <tr>
+                        <td>Мөнх-Эрдэнэ</td>
+                        <td>21</td>
+                        <td>Цэрэг</td>
+                        <td>2010</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="contact" class="page">
+            <h2>Холбоо барих</h2>
+            <p>Имэйл: 22b1num1281@stud.num.edu.mn</p>
+            <p>Утас: 99130584</p>
+            <p>Байршил: Улаанбаатар, Монгол</p>
+
+            <p>
+                <a href="https://www.facebook.com/baturnukh.bumbuu" target="_blank">Facebook</a> | 
+                <a href="https://www.instagram.com/sschlorine/" target="_blank">Instagram</a>
+            </p>
+        </div>
+
+
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
