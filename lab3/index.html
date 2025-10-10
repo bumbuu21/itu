@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TheFacebook - Profile</title>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e6e9ef;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #2a4b8d;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #9db4e0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  margin: 10px 20px;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: white;
+  border: 1px solid #9db4e0;
+  padding: 10px;
+}
+
+.sidebar h3 {
+  font-size: 14px;
+  background-color: #d8e0f0;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.sidebar a {
+  display: block;
+  font-size: 13px;
+  color: #2a4b8d;
+  text-decoration: none;
+  margin: 3px 0;
+}
+
+.main {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.section {
+  background-color: white;
+  border: 1px solid #9db4e0;
+  margin-bottom: 15px;
+}
+
+.section h2 {
+  background-color: #d8e0f0;
+  padding: 5px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.section-content {
+  padding: 10px;
+  font-size: 13px;
+}
+
+.section-content img {
+  width: 100%;
+  border: 1px solid #9db4e0;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table td {
+  padding: 4px 0;
+  vertical-align: top;
+}
+
+.info-label {
+  width: 120px;
+  color: #2a4b8d;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>[ thefacebook ]</h1>
+  <nav>
+    <a href="#">home</a>
+    <a href="#">search</a>
+    <a href="#">global</a>
+    <a href="#">social net</a>
+    <a href="#">invite</a>
+    <a href="#">faq</a>
+    <a href="#">logout</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="sidebar">
+    <h3>Quick Search</h3>
+    <input type="text" placeholder="quick search" style="width:100%; box-sizing:border-box;">
+    <button style="width:100%; margin-top:5px;">Go</button>
+
+    <h3>My Profile</h3>
+    <a href="#">Edit My Profile</a>
+    <a href="#">My Friends</a>
+    <a href="#">My Groups</a>
+    <a href="#">My Messages</a>
+    <a href="#">My Account</a>
+    <a href="#">My Privacy</a>
+  </div>
+
+  <div class="main">
+    <div class="section">
+      <h2>Scott Pearson’s Profile (This is you)</h2>
+      <div class="section-content">
+        <img src="https://via.placeholder.com/300x200" alt="Profile Picture">
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Information</h2>
+      <div class="section-content">
+        <table class="info-table">
+          <tr><td class="info-label">Name:</td><td>Scott Pearson, BS</td></tr>
+          <tr><td class="info-label">Email:</td><td>pearsons2@scranton.edu</td></tr>
+          <tr><td class="info-label">Status:</td><td>Alumnus/Alumna</td></tr>
+          <tr><td class="info-label">Year:</td><td>2004</td></tr>
+          <tr><td class="info-label">Concentration:</td><td>Computing Sciences, Mathematics</td></tr>
+          <tr><td class="info-label">High School:</td><td>Dunmore HS ’00</td></tr>
+          <tr><td class="info-label">Relationship:</td><td>Single</td></tr>
+          <tr><td class="info-label">Looking For:</td><td>Friendship, Dating, Relationship</td></tr>
+          <tr><td class="info-label">Interested In:</td><td>Women</td></tr>
+          <tr><td class="info-label">Interests:</td><td>Drinking, Football, Basketball, Tennis</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
