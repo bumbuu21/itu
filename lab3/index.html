@@ -1,169 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TheFacebook - Profile</title>
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #e6e9ef;
-  margin: 0;
-  padding: 0;
-}
+<html>
 
-header {
-  background-color: #2a4b8d;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-header h1 {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-  color: #9db4e0;
-}
+<table border="0" width="100%" align="center" cellspacing="0" cellpadding="4">
+  <tr bgcolor="#3b5998">
+    <td colspan="2" align="center">
+      <font color="white" size="6"><b>Facebook</b></font><br>
+      <font color="white" size="2">home  search  logout</font>
+    </td>
+  </tr>
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 15px;
-  font-size: 14px;
-}
+  <tr valign="top">
+    <td width="10%" bgcolor="#e9ebf3" valign="top">
+      <table border="0" width="100%" cellspacing="2" cellpadding="2">
+        <tr><td><b>Search</b></td></tr>
+        <tr><td>
+          <input type="text" size="25" placeholder="Search...">
+        </td></tr>
 
-.container {
-  display: flex;
-  margin: 10px 20px;
-}
+        <tr><td>Profile</td></tr>
+        <tr><td>Groups</td></tr>
+        <tr><td>Friends</td></tr>
+        <tr><td>Messages</td></tr>
+        <tr><td>Mobile Info</td></tr>
+        <tr><td>Account</td></tr>
+        <tr><td>Privacy</td></tr>
+      </table>
+    </td>
 
-.sidebar {
-  width: 220px;
-  background-color: white;
-  border: 1px solid #9db4e0;
-  padding: 10px;
-}
+    <td width="60%" valign="top">
+      <table border="1" width="100%" cellspacing="0" cellpadding="4" bordercolor="#cccccc">
+        <tr bgcolor="#d8dfea">
+          <td colspan="2"><b>Bat's profile</b></td>
+        </tr>
 
-.sidebar h3 {
-  font-size: 14px;
-  background-color: #d8e0f0;
-  padding: 5px;
-  margin-top: 10px;
-}
+        <tr valign="top">
+          <td width="40%" align="center" valign="top">
 
-.sidebar a {
-  display: block;
-  font-size: 13px;
-  color: #2a4b8d;
-  text-decoration: none;
-  margin: 3px 0;
-}
+            <table border="1" width="100%" cellspacing="0" cellpadding="3">
+              <tr bgcolor="#3b5998">
+                <td align="left"><font color="white"><b>Picture</b></font></td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <img src="D:\Screenshots\Screenshot 2025-10-10 125303.png" alt="Profile Picture" style="max-width:100%; height:150px;">
+              <tr>
+                <td align="center">
+                  <br><br>
+                  Edit profile<br>
+                  Account<br>
+                  Privacy
+                </td>
+              </tr>
+            </table><br>
 
-.main {
-  flex: 1;
-  margin-left: 20px;
-}
+            <table border="1" width="100%" cellspacing="0" cellpadding="3">
+              <tr bgcolor="#3b5998">
+                <td><font color="white"><b>Posts</b></font></td>
+              </tr>
+              <tr><td align="center">posts</td></tr>
+            </table><br>
 
-.section {
-  background-color: white;
-  border: 1px solid #9db4e0;
-  margin-bottom: 15px;
-}
+            <table border="1" width="100%" cellspacing="0" cellpadding="3">
+              <tr bgcolor="#3b5998">
+                <td><font color="white"><b>Photos</b></font></td>
+              </tr>
+              <tr><td align="center">mobile uploads</td></tr>
+            </table><br>
 
-.section h2 {
-  background-color: #d8e0f0;
-  padding: 5px;
-  font-size: 14px;
-  margin: 0;
-}
+            <table border="1" width="100%" cellspacing="0" cellpadding="3">
+              <tr bgcolor="#3b5998">
+                <td><font color="white"><b>Videos</b></font></td>
+              </tr>
+              <tr><td align="center">videos.</td></tr>
+            </table>
+          </td>
 
-.section-content {
-  padding: 10px;
-  font-size: 13px;
-}
-
-.section-content img {
-  width: 100%;
-  border: 1px solid #9db4e0;
-}
-
-.info-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.info-table td {
-  padding: 4px 0;
-  vertical-align: top;
-}
-
-.info-label {
-  width: 120px;
-  color: #2a4b8d;
-  font-weight: bold;
-}
-</style>
-</head>
-<body>
-
-<header>
-  <h1>[ thefacebook ]</h1>
-  <nav>
-    <a href="#">home</a>
-    <a href="#">search</a>
-    <a href="#">global</a>
-    <a href="#">social net</a>
-    <a href="#">invite</a>
-    <a href="#">faq</a>
-    <a href="#">logout</a>
-  </nav>
-</header>
-
-<div class="container">
-  <div class="sidebar">
-    <h3>Quick Search</h3>
-    <input type="text" placeholder="quick search" style="width:100%; box-sizing:border-box;">
-    <button style="width:100%; margin-top:5px;">Go</button>
-
-    <h3>My Profile</h3>
-    <a href="#">Edit My Profile</a>
-    <a href="#">My Friends</a>
-    <a href="#">My Groups</a>
-    <a href="#">My Messages</a>
-    <a href="#">My Account</a>
-    <a href="#">My Privacy</a>
-  </div>
-
-  <div class="main">
-    <div class="section">
-      <h2>Scott Pearson’s Profile (This is you)</h2>
-      <div class="section-content">
-        <img src="https://via.placeholder.com/300x200" alt="Profile Picture">
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Information</h2>
-      <div class="section-content">
-        <table class="info-table">
-          <tr><td class="info-label">Name:</td><td>Scott Pearson, BS</td></tr>
-          <tr><td class="info-label">Email:</td><td>pearsons2@scranton.edu</td></tr>
-          <tr><td class="info-label">Status:</td><td>Alumnus/Alumna</td></tr>
-          <tr><td class="info-label">Year:</td><td>2004</td></tr>
-          <tr><td class="info-label">Concentration:</td><td>Computing Sciences, Mathematics</td></tr>
-          <tr><td class="info-label">High School:</td><td>Dunmore HS ’00</td></tr>
-          <tr><td class="info-label">Relationship:</td><td>Single</td></tr>
-          <tr><td class="info-label">Looking For:</td><td>Friendship, Dating, Relationship</td></tr>
-          <tr><td class="info-label">Interested In:</td><td>Women</td></tr>
-          <tr><td class="info-label">Interests:</td><td>Drinking, Football, Basketball, Tennis</td></tr>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
-
-</body>
+          <td width="60%" valign="top">
+            <table border="1" width="100%" cellspacing="0" cellpadding="3">
+              <tr bgcolor="#3b5998">
+                <td><font color="white"><b>Info</b></font></td>
+              </tr>
+              <tr>
+                <td>
+                  <table border="0" width="100%" cellpadding="2">
+                    <tr><td colspan="2"><br><b>Info:</b></td></tr>
+                    <tr><td>Email:</td><td>bumbuu1515@gmail.com</td></tr>
+                    <tr><td>Status:</td><td>Student</td></tr>
+                    <tr><td>Sex:</td><td>Male</td></tr>
+                    <tr><td>Year:</td><td>2004</td></tr>
+                    <tr><td>Major:</td><td>Computer Science</td></tr>
+                    <tr><td>Phone:</td><td>99130584</td></tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
 </html>
