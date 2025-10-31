@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Steam Profile Style CV — Таны нэр</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #171a21;
+      --bg-light: #1b2838;
+      --accent: #66c0f4;
+      --text: #c7d5e0;
+      --muted: #8f98a0;
+      --radius: 12px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0; background: var(--bg-dark); color: var(--text);
+    }
+    .container {
+      max-width: 950px; margin: 40px auto; background: var(--bg-light);
+      border-radius: var(--radius); box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      overflow: hidden; border: 2px solid #2a475e;
+    }
+    .header {
+      background: linear-gradient(90deg, #1b2838, #2a475e);
+      padding: 30px; display: flex; align-items: center; gap: 20px;
+      border-bottom: 1px solid #2a475e;
+    }
+    .avatar {
+      width: 120px; height: 120px; border-radius: 8px; object-fit: cover;
+      border: 3px solid var(--accent);
+    }
+    .info h1 { margin: 0; color: var(--accent); font-size: 26px; }
+    .info p { margin: 6px 0; color: var(--muted); font-size: 15px; }
+
+    .status {
+      background: rgba(102,192,244,0.15);
+      color: var(--accent); display: inline-block; padding: 6px 12px;
+      border-radius: 6px; font-weight: 600; font-size: 14px; margin-top: 10px;
+    }
+
+    .content { padding: 30px; }
+    .section-title {
+      border-left: 4px solid var(--accent);
+      padding-left: 10px; font-size: 18px; color: var(--accent);
+      margin-top: 28px; margin-bottom: 12px;
+    }
+
+    .summary {
+      background: rgba(255,255,255,0.03);
+      padding: 16px; border-radius: var(--radius);
+      color: var(--text); line-height: 1.6; font-size: 15px;
+    }
+
+    .game-card {
+      background: rgba(255,255,255,0.03);
+      padding: 14px; border-radius: var(--radius);
+      margin-bottom: 12px; border: 1px solid #2a475e;
+    }
+    .game-card h3 { margin: 0; color: var(--accent); font-size: 16px; }
+    .game-card p { margin: 6px 0; color: var(--muted); font-size: 14px; }
+
+    .skills {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px;
+    }
+    .tag {
+      background: #2a475e; padding: 6px 12px; border-radius: 8px;
+      font-size: 13px; color: var(--text);
+    }
+
+    footer {
+      text-align: center; color: var(--muted);
+      padding: 18px; font-size: 13px;
+      background: #1b2838; border-top: 1px solid #2a475e;
+    }
+
+    @media(max-width:700px){
+      .header{flex-direction:column;text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img class="avatar" src="https://via.placeholder.com/300x300.png?text=Avatar" alt="Таны зураг">
+      <div class="info">
+        <h1>Таны Нэр</h1>
+        <p>Програм хангамжийн инженер | Улаанбаатар, Монгол</p>
+        <p>Email: you@example.com | Утас: +976 9999 9999</p>
+        <div class="status">🟢 Онлайн</div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="section-title">Товч танилцуулга</div>
+      <div class="summary">
+        Би программ хангамжийн инженер бөгөөд веб, систем хөгжүүлэлт, өгөгдлийн бүтцийн чиглэлээр мэргэшсэн. Багаар хамтран ажиллах, асуудал шийдвэрлэх чадвартай, шинэ технологи сурах сонирхолтой.
+      </div>
+
+      <div class="section-title">Төслүүд (Games)</div>
+      <div class="game-card">
+        <h3>FaceID Attendance System</h3>
+        <p>Python + React ашиглан нүүр танилтанд суурилсан бүртгэлийн систем бүтээсэн.</p>
+      </div>
+      <div class="game-card">
+        <h3>Online XO Game</h3>
+        <p>C хэл дээр сүлжээгээр холбогдсон 20x20 тавцантай XO тоглоом.</p>
+      </div>
+
+      <div class="section-title">Ажлын туршлага</div>
+      <div class="game-card">
+        <h3>TechSoft ХХК — Front-End Developer</h3>
+        <p>2023 — Одоог хүртэл</p>
+        <p>Vue.js ашиглан компанийн UI-г сайжруулж хэрэглэгчийн сэтгэл ханамжийг 25%-иар өсгөсөн.</p>
+      </div>
+
+      <div class="section-title">Ур чадвар</div>
+      <div class="skills">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">C / C++</span>
+        <span class="tag">Python</span>
+        <span class="tag">Git</span>
+      </div>
+
+      <div class="section-title">Амжилт, цол</div>
+      <div class="game-card">
+        <h3>🏆 Hackathon Champion — 2024</h3>
+        <p>Монголын их сургуулиудын хооронд зохион байгуулсан Hackathon тэмцээнд түрүүлсэн.</p>
+      </div>
+
+    </div>
+
+    <footer>
+      © 2025 Таны нэр — Steam profile inspired CV layout
+    </footer>
+  </div>
+</body>
+</html>
