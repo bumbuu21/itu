@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Mongolia Clone</title>
+
+    <!-- SEO IMPROVED -->
+    <title>E-Mongolia | Төрийн үйлчилгээний нэгдсэн систем</title>
+    <meta name="description" content="E-Mongolia — Төрийн үйлчилгээний нэгдсэн цахим портал. Та хэзээ ч хаанаас ч төрийн үйлчилгээг онлайн авах боломжтой." />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/batresource/em-assets/favicon.png" />
+
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
     <!-- HEADER -->
     <header class="navbar">
         <div class="container nav-container">
             <div class="logo">e-Mongolia</div>
             <nav class="nav-links">
-                <a href="#">Үйлчилгээ</a>
-                <a href="#">Хөтөлбөр</a>
-                <a href="#">Мэдээ</a>
-                <a href="#">Тухай</a>
+                <a href="#services">Үйлчилгээ</a>
+                <a href="#program">Хөтөлбөр</a>
+                <a href="#news">Мэдээ</a>
+                <a href="#about">Тухай</a>
             </nav>
             <button class="login-btn">Нэвтрэх</button>
             <div class="menu-btn">☰</div>
@@ -23,12 +31,12 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container hero-content">
             <div class="hero-text">
                 <h1>Таны төрийн үйлчилгээ нэг дор</h1>
                 <p>Хэзээ ч, хаанаас ч төрийн үйлчилгээ авах боломж.</p>
-                <button class="cta">Үйлчилгээ үзэх</button>
+                <a href="#services"><button class="cta">Үйлчилгээ үзэх</button></a>
             </div>
             <div class="hero-img">
                 <img src="https://cdn.jsdelivr.net/gh/batresource/em-assets/hero.png" alt="e-mongolia" />
@@ -37,7 +45,7 @@
     </section>
 
     <!-- SERVICES -->
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <h2>Төрийн үйлчилгээ</h2>
             <div class="service-grid">
@@ -53,12 +61,36 @@
         </div>
     </section>
 
+    <!-- PROGRAM SECTION -->
+    <section class="program" id="program" style="padding:60px 0; background:white;">
+        <div class="container">
+            <h2>Хөтөлбөрүүд</h2>
+            <p>Иргэдэд зориулсан цахим үйлчилгээний шинэ боломжууд.</p>
+        </div>
+    </section>
+
+    <!-- NEWS SECTION -->
+    <section class="news" id="news" style="padding:60px 0; background:#f5f7fb;">
+        <div class="container">
+            <h2>Мэдээ мэдээлэл</h2>
+            <p>Цахим шилжилтийн талаарх хамгийн сүүлийн үеийн мэдээллүүд.</p>
+        </div>
+    </section>
+
     <!-- STATS -->
     <section class="stats">
         <div class="container stats-flex">
             <div class="stat-box"><h3>700+</h3><p>Төрийн үйлчилгээ</p></div>
             <div class="stat-box"><h3>3.5M+</h3><p>Иргэн ашиглаж байна</p></div>
             <div class="stat-box"><h3>24/7</h3><p>Онлайн үйлчилгээ</p></div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about" style="padding:60px 0; background:white;">
+        <div class="container">
+            <h2>Бидний тухай</h2>
+            <p>e-Mongolia нь төрийн үйлчилгээг иргэдэд хүргэх цахим нэгдсэн платформ юм.</p>
         </div>
     </section>
 
@@ -70,12 +102,18 @@
                 <p>Цахим үйлчилгээний нэгдсэн систем.</p>
             </div>
             <div class="footer-links">
-                <a href="#">Үйлчилгээ</a>
-                <a href="#">Тусламж</a>
-                <a href="#">Нууцлал</a>
-                <a href="#">Холбоо барих</a>
+                <a href="#services">Үйлчилгээ</a>
+                <a href="#about">Тусламж</a>
+                <a href="#privacy">Нууцлал</a>
+                <a href="#contact">Холбоо барих</a>
             </div>
         </div>
     </footer>
+
+    <!-- MOBILE MENU SCRIPT -->
+    <script>
+        document.querySelector(".menu-btn").onclick = () =>
+            document.querySelector(".nav-links").classList.toggle("show");
+    </script>
 </body>
 </html>
