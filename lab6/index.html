@@ -4,14 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO IMPROVED -->
-    <title>E-Mongolia | Төрийн үйлчилгээний нэгдсэн систем</title>
-    <meta name="description" content="E-Mongolia — Төрийн үйлчилгээний нэгдсэн цахим портал. Та хэзээ ч хаанаас ч төрийн үйлчилгээг онлайн авах боломжтой." />
+    <!-- SEO Title & Description -->
+    <title>E-Mongolia Clone – Төрийн үйлчилгээ нэг дор</title>
+    <meta name="description" content="E-Mongolia үйлчилгээг дуурайсан төсөл. Төрийн үйлчилгээний цахим нүүр хуудас — хурдан, хялбар, нэг дор." />
 
-    <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/batresource/em-assets/favicon.png" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://example.com/" />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Preload Critical CSS -->
+    <link rel="preload" href="style.css" as="style" />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Social Meta Tags -->
+    <meta property="og:title" content="E-Mongolia Clone" />
+    <meta property="og:description" content="Таны төрийн үйлчилгээ нэг дор — e-Mongolia загвар веб." />
+    <meta property="og:image" content="https://example.com/thumbnail.jpg" />
+    <meta property="og:type" content="website" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "E-Mongolia Clone",
+      "url": "https://example.com/",
+      "description": "E-Mongolia үйлчилгээг дуурайсан төсөл веб сайт.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Student Dev"
+      }
+    }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} 
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXX');
+    </script>
+
+    <!-- robots.txt notice -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Lazy loading default -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('img').forEach(img => img.setAttribute('loading','lazy'));
+        });
+    </script>
 </head>
 <body>
 
@@ -115,5 +160,8 @@
         document.querySelector(".menu-btn").onclick = () =>
             document.querySelector(".nav-links").classList.toggle("show");
     </script>
+    
+    <!-- Deferred JS example -->
+    <script src="main.js" defer></script>
 </body>
 </html>
