@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS Problems Interactive</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; background: #f3f6fa; color: #1a1a1a;}
+  h1 { text-align:center; color:#0052cc;}
+  section { background:white; padding:20px; margin:20px auto; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); max-width:600px;}
+  input, button { padding:8px 12px; margin:5px 0; font-size:16px; border-radius:5px; border:1px solid #ccc;}
+  button { background:#0052cc; color:white; cursor:pointer; border:none;}
+  button:hover { background:#0040a0;}
+  .result { margin-top:10px; font-weight:bold;}
+</style>
+</head>
+<body>
+
+<h1>JavaScript Problems Interactive</h1>
+
+<!-- 1) Sum of digits palindrome -->
+<section>
+  <h2>1. Sum of digits palindrome</h2>
+  <input type="number" id="palinInput" placeholder="Enter number">
+  <button onclick="checkPalindrome()">Check</button>
+  <div class="result" id="palinResult"></div>
+</section>
+
+<!-- 2) Chase problem -->
+<section>
+  <h2>2. Wolf and Rabbit Chase</h2>
+  <input type="number" id="chaseDistance" placeholder="Distance in km">
+  <button onclick="solveChase()">Calculate</button>
+  <div class="result" id="chaseResult"></div>
+</section>
+
+<!-- 3) Apartment locator -->
+<section>
+  <h2>3. Apartment Locator</h2>
+  <input type="number" id="aptNumber" placeholder="Apartment number">
+  <button onclick="locateApt()">Find</button>
+  <div class="result" id="aptResult"></div>
+</section>
+
+<!-- 4) LCM of array -->
+<section>
+  <h2>4. LCM of 5 numbers</h2>
+  <input type="text" id="lcmArray" placeholder="Enter 5 numbers, comma separated">
+  <button onclick="calcLCM()">Calculate LCM</button>
+  <div class="result" id="lcmResult"></div>
+</section>
+
+<!-- 5) Morning/Evening number -->
+<section>
+  <h2>5. Morning/Evening operation</h2>
+  <input type="number" id="morningInput" placeholder="Enter number">
+  <button onclick="morningEvening()">Check</button>
+  <div class="result" id="morningResult"></div>
+</section>
+
+<script>
+// 1) Palindrome of sum of digits
+function isSumDigitsPalindrome(n){
+    const s = Math.abs(n).toString();
+    let sum=0;
+    for (let ch of s) sum+=Number(ch);
+    const sumStr = String(sum);
+    const rev = sumStr.split('').reverse().join('');
+    return {sum, isPalindrome: sumStr===rev};
+}
+function checkPalindrome(){
+    const n = Number(document.getElementById('palinInput').value);
+    const r = isSumDigitsPalindrome(n);
+    document.getElementById('palinResult').innerText = `Sum = ${r.sum}, Palindrome: ${r.isPalindrome}`;
+}
+
+// 2) Chase
+function chaseTime(distanceKm, wolfSpeed=25, rabbitSpeed=18){
+    if (wolfSpeed<=rabbitSpeed) return null;
+    const relativeSpeedKmph = wolfSpeed - rabbitSpeed;
+    const timeHours = distanceKm/relativeSpeedKmph;
+    const totalSeconds = timeHours*3600;
+    const minutes=Math.floor(totalSeconds/60);
+    const seconds=Math.round(totalSeconds - minutes*60);
+    return {minutes, seconds};
+}
+function solveChase(){
+    const d = Number(document.getElementById('chaseDistance').value);
+    const r = chaseTime(d);
+    const res = r ? `${r.minutes} min ${r.seconds} sec` : 'Wolf cannot catch the rabbit';
+    document.getElementById('chaseResult').innerText = res;
+}
+
+// 3) Apartment
+function locateApartment(apartmentNumber,floors=9,entrances=3,aptPerFloor=4){
+    const perEntrance = floors*aptPerFloor;
+    const totalApts = perEntrance*entrances;
+    if(apartmentNumber>totalApts) return {error:`Apartment ${apartmentNumber} does not exist`};
+    const entrance=Math.ceil(apartmentNumber/perEntrance);
+    const within=(apartmentNumber-1)%perEntrance;
+    const floor=Math.floor(within/aptPerFloor)+1;
+    const aptOnFloor=(within%aptPerFloor)+1;
+    return {entrance,floor,aptOnFloor};
+}
+function locateApt(){
+    const n = Number(document.getElementById('aptNumber').value);
+    const r = locateApartment(n);
+    document.getElementById('aptResult').innerText = r.error ? r.error : `Entrance ${r.entrance}, Floor ${r.floor}, Apt ${r.aptOnFloor}`;
+}
+
+// 4) LCM
+function gcd(a,b){while(b!==0){let t=a%b;a=b;b=t;}return Math.abs(a);}
+function lcm(a,b){return Math.abs(a*b)/gcd(a,b);}
+function arrayLCM(arr){return arr.reduce((acc,x)=>lcm(acc,x),1);}
+function calcLCM(){
+    const input = document.getElementById('lcmArray').value;
+    const arr = input.split(',').map(x=>Number(x.trim()));
+    if(arr.length!==5) {document.getElementById('lcmResult').innerText='Enter exactly 5 numbers'; return;}
+    const r=arrayLCM(arr);
+    document.getElementById('lcmResult').innerText=`LCM = ${r}`;
+}
+
+// 5) Morning/Evening
+function morningOrEveningCompute(x){
+    const hour = new Date().getHours();
+    const isMorning = hour>=6 && hour<12;
+    return isMorning ? x*x : Math.sqrt(x);
+}
+function morningEvening(){
+    const x = Number(document.getElementById('morningInput').value);
+    const res = morningOrEveningCompute(x);
+    document.getElementById('morningResult').innerText = `Result = ${res}`;
+}
+</script>
+
+</body>
+</html>
