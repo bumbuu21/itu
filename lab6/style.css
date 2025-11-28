@@ -1,0 +1,241 @@
+/* =============================
+   GLOBAL STYLES
+============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fa;
+    color: #1a1a1a;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =============================
+   NAVBAR
+============================= */
+.navbar {
+    background: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #e6e6e6;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0052cc;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #0052cc;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background: #0052cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* =============================
+   HERO SECTION
+============================= */
+.hero {
+    padding: 80px 0;
+    background: #f0f4ff;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.cta {
+    padding: 14px 30px;
+    border: none;
+    background: #ff385c;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hero-img {
+    max-width: 480px;
+}
+
+/* =============================
+   SERVICES
+============================= */
+.services {
+    padding: 70px 0;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-card {
+    flex: 1 1 calc(25% - 20px);
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* =============================
+   STATS
+============================= */
+.stats {
+    background: #e9f0ff;
+    padding: 60px 0;
+}
+
+.stats-flex {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stat-box h3 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* =============================
+   FOOTER
+============================= */
+.footer {
+    background: #1d2433;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services .service-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .stats-flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .services .service-card {
+        flex: 1 1 100%;
+    }
+}

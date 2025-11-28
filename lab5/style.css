@@ -1,0 +1,271 @@
+:root {
+    --primary-navy: #13124F;
+    --2ndblue: #1B1B6C;
+    --3rdblue: #352BA5;
+    --accent-pink: #F61067;
+    --accent-green: #2AD392;
+    --accent-grey: #9090A5;
+
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333; 
+}
+
+/* --- Top Logo Bar Styling (Шинээр нэмэгдсэн) --- */
+.top-logo-bar {
+    background-color: var(--2ndblue);
+    padding: 10px 0; /* Дээд доод зай */
+}
+
+.webjunto-logo-text {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5em; /* Зурагт тодорхой харагдахгүй байгаа тул ойролцоогоор тааруулсан */
+    /* Зурагт лого нь зураг (SVG/PNG) хэлбэрээр байсан ч бид текстийг ашиглан байрлуулав. */
+    /* Лого нь зүүн талд контейнер дотор байрлана. */
+}
+
+/* --- Jumbotron Styling (Өөрчлөгдсөн: Logo Bar-ийн дараа байрлаж байна) --- */
+.full-width-jumbotron {
+    /* Logo bar-т background-color: var(--primary-navy)-г ашигласан тул энэ хэсгийг
+       зурагтай ижил болгохын тулд background-ийг өөрчлөхгүйгээр үлдээсэн. */
+    background-color: var(--primary-navy); 
+    color: white;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 0;
+}
+.learn-more-btn {
+    background-color: var(--accent-pink);
+    border-color: var(--accent-pink);
+    font-weight: 700;
+    border-radius: 0;
+    padding: 10px 30px; /* Товчлуурын хэмжээг тохируулах */
+}
+
+.learn-more-btn:hover,
+.learn-more-btn:focus {
+    background-color: #E00A52; /* Бага зэрэг бараандуу */
+    border-color: #E00A52;
+}
+
+/* --- Main Content Styling --- */
+.main-content-container {
+    padding-top: 20px;
+}
+
+h2 {
+    font-weight: 700; /* Heading goes here */
+    margin-top: 0;
+    padding-bottom: 10px;
+}
+
+/* Video Section */
+.video-container {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd; /* Зураг дээр бага зэргийн хүрээтэй харагдаж байна */
+}
+
+.video-caption {
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 20px;
+    padding-left: 5px;
+}
+
+/* Footer Alert (Whoa! This is a super imporant alert!) */
+.footer-alert {
+    background-color: #eee;
+    color: #555;
+    border: 1px solid #ddd;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 15px;
+    font-size: 1.1em;
+}
+
+.footer-alert strong {
+    font-weight: 700;
+}
+
+/* --- Sidebar Styling --- */
+
+/* Messages Panel */
+.messages-panel {
+    border: none;
+    box-shadow: none;
+}
+
+.messages-header {
+    background-color: var(--accent-pink);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    border-radius: 0; /* Булангуудыг тэгшлэх */
+    padding: 10px;
+}
+
+.messages-badge {
+    background-color: white;
+    color: var(--accent-pink);
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.welcome-candidate-body {
+    background-color: var(--primary-navy);
+    color: white;
+    padding: 20px;
+}
+
+.welcome-candidate-body h4 {
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.send-btn {
+    background-color: var(--accent-pink);
+    border-color: var(--accent-pink);
+    font-weight: 700;
+    width: 100%; /* Бүтэн өргөн */
+    margin-top: 10px;
+    border-radius: 0;
+}
+
+.small-text-link {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.small-text-link a {
+    color: var(--accent-grey);
+    font-size: 0.9em;
+    font-weight: 400; /* Lato Regular */
+    text-decoration: none; /* Зурагт зураасгүй харагдаж байна */
+}
+
+.small-text-link a:hover {
+    color: #fff; /* Hover үед цагаан болгох */
+}
+
+/* Vote Panel */
+.vote-panel {
+    border: 1px solid #ddd;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 30px; /* Зураг дээр зайтай харагдаж байна */
+}
+
+.vote-panel h4 {
+    font-weight: 700;
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.vote-buttons {
+    display: flex; /* Товчлууруудыг зэрэгцүүлэх */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-vote {
+    flex: 1; /* Адилхан өргөн авах */
+    padding: 8px 0;
+    border-radius: 0;
+    font-weight: 700;
+    margin: 0 5px;
+    text-shadow: none; /* Bootstrap-ийн default-г арилгах */
+}
+
+.cool-btn {
+    background-color: var(--accent-pink);
+    border-color: var(--accent-pink);
+    color: white;
+}
+
+.cool-btn:hover {
+    background-color: #E00A52;
+    border-color: #E00A52;
+    color: white;
+}
+
+.lame-btn {
+    background-color: white;
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+}
+
+.lame-btn:hover {
+    background-color: #ddd;
+    border-color: #ccc;
+    color: #555;
+}
+
+/* Progress Bar Customization */
+.vote-progress-bar {
+    height: 12px; /* Бага зэрэг өндөрлөх */
+    margin-bottom: 0;
+    border-radius: 0; /* Bootstrap-ийн булангийн бөөрөнхийг арилгах */
+}
+
+/* 2 хэсэгт хуваагдах progress bar-ийн өнгө */
+.progress-bar-cool {
+    background-color: var(--accent-pink);
+}
+
+.progress-bar-lame {
+    background-color: var(--accent-green);
+    float: right; /* Баруун талруу шилжүүлэх */
+}
+
+/* --- Footer Styling --- */
+.main-footer {
+    background-color: var(--primary-navy);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* -------------------------------------------
+   Даалгавар 3-т Responsive хийх (Media Queries)
+   ------------------------------------------- */
+/* Bootstrap 3-т, grid system өөрөө responsive тул ихэнх зүйлс автоматаар таарна.
+   Гэхдээ жижиг дэлгэц дээр зарим элементийг нэмж тохируулах шаардлагатай. */
+
+@media (max-width: 991px) {
+    /* Tablet (sm) болон түүнээс доош дэлгэц */
+    .col-md-8, .col-md-4 {
+        width: 100%; /* Бүтэн өргөн авах */
+    }
+
+    .sidebar-container {
+        margin-top: 30px; /* Гол агуулгатай зай үүсгэх */
+    }
+
+    .footer-alert {
+        margin-top: 10px; /* Жижиг дэлгэц дээр зайг багасгах */
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Гар утас (xs) дэлгэц */
+    .full-width-jumbotron h1 {
+        font-size: 2.5em; /* Том гарчгийг багасгах */
+    }
+
+    .vote-buttons {
+        flex-direction: column; /* Товчлууруудыг доош нь эгнүүлэх */
+    }
+
+    .btn-vote {
+        margin: 5px 0; /* Товчлууруудын хооронд зай үүсгэх */
+    }
+}
