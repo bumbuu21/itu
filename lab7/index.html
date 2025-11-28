@@ -3,133 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JS Problems Interactive</title>
+<title>JS Асуултууд</title>
 <style>
-  body { font-family: Arial, sans-serif; padding: 20px; background: #f3f6fa; color: #1a1a1a;}
-  h1 { text-align:center; color:#0052cc;}
-  section { background:white; padding:20px; margin:20px auto; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1); max-width:600px;}
-  input, button { padding:8px 12px; margin:5px 0; font-size:16px; border-radius:5px; border:1px solid #ccc;}
-  button { background:#0052cc; color:white; cursor:pointer; border:none;}
-  button:hover { background:#0040a0;}
-  .result { margin-top:10px; font-weight:bold;}
+  body { font-family: Arial, sans-serif; padding: 20px; background: #f3f6fa; }
+  h1 { text-align:center; color:#0052cc; }
+  section { background:white; padding:15px; margin:15px auto; border-radius:8px; max-width:500px; }
+  input, button { padding:6px 10px; margin:5px 0; font-size:16px; }
+  button { background:#0054ae; color:white; border:none; cursor:pointer; border-radius:5px; }
+  button:hover { background:#0040a0; }
+  .result { margin-top:8px; font-weight:bold; }
 </style>
 </head>
 <body>
 
-<h1>JavaScript Problems Interactive</h1>
+<h1>JS Асуултууд</h1>
 
-<!-- 1) Sum of digits palindrome -->
+<!-- 1) Тооны цифрийн нийлбэр палиндром -->
 <section>
-  <h2>1. Sum of digits palindrome</h2>
-  <input type="number" id="palinInput" placeholder="Enter number">
-  <button onclick="checkPalindrome()">Check</button>
+  <h2>1. Цифрийн нийлбэр палиндром уу?</h2>
+  <input type="number" id="palinInput" placeholder="Тоог оруулна уу">
+  <button onclick="checkPalindrome()">Enter</button>
   <div class="result" id="palinResult"></div>
 </section>
 
-<!-- 2) Chase problem -->
+<!-- 2) Чоно ба туулай -->
 <section>
-  <h2>2. Wolf and Rabbit Chase</h2>
-  <input type="number" id="chaseDistance" placeholder="Distance in km">
-  <button onclick="solveChase()">Calculate</button>
+  <h2>2. Чоно туулайг барих хугацаа</h2>
+  <input type="number" id="chaseDistance" placeholder="Зай (км)">
+  <button onclick="solveChase()">Enter</button>
   <div class="result" id="chaseResult"></div>
 </section>
 
-<!-- 3) Apartment locator -->
+<!-- 3) Орц, давхар, байр -->
 <section>
-  <h2>3. Apartment Locator</h2>
-  <input type="number" id="aptNumber" placeholder="Apartment number">
-  <button onclick="locateApt()">Find</button>
+  <h2>3. Орц, давхар, байр олох</h2>
+  <input type="number" id="aptNumber" placeholder="Байрны дугаар">
+  <button onclick="locateApt()">Enter</button>
   <div class="result" id="aptResult"></div>
 </section>
 
-<!-- 4) LCM of array -->
+<!-- 4) 5 тооны хамгийн бага нийтийн үржвэр -->
 <section>
-  <h2>4. LCM of 5 numbers</h2>
-  <input type="text" id="lcmArray" placeholder="Enter 5 numbers, comma separated">
-  <button onclick="calcLCM()">Calculate LCM</button>
+  <h2>4. 5 тооны LCM</h2>
+  <input type="text" id="lcmArray" placeholder="5 тоо, таслалаар салгах">
+  <button onclick="calcLCM()">Enter</button>
   <div class="result" id="lcmResult"></div>
 </section>
 
-<!-- 5) Morning/Evening number -->
+<!-- 5) Өглөө/Орой -->
 <section>
-  <h2>5. Morning/Evening operation</h2>
-  <input type="number" id="morningInput" placeholder="Enter number">
-  <button onclick="morningEvening()">Check</button>
+  <h2>5. Өглөө эсвэл орой</h2>
+  <input type="number" id="morningInput" placeholder="Тоог оруулна уу">
+  <button onclick="morningEvening()">Enter</button>
   <div class="result" id="morningResult"></div>
 </section>
 
 <script>
-// 1) Palindrome of sum of digits
+// 1) Цифрийн нийлбэр палиндром
 function isSumDigitsPalindrome(n){
-    const s = Math.abs(n).toString();
     let sum=0;
-    for (let ch of s) sum+=Number(ch);
-    const sumStr = String(sum);
-    const rev = sumStr.split('').reverse().join('');
-    return {sum, isPalindrome: sumStr===rev};
+    for(let ch of Math.abs(n).toString()) sum += Number(ch);
+    let s = sum.toString();
+    return {sum, isPalindrome: s === s.split('').reverse().join('')};
 }
 function checkPalindrome(){
     const n = Number(document.getElementById('palinInput').value);
     const r = isSumDigitsPalindrome(n);
-    document.getElementById('palinResult').innerText = `Sum = ${r.sum}, Palindrome: ${r.isPalindrome}`;
+    document.getElementById('palinResult').innerText = `Нийлбэр = ${r.sum}, Палиндром: ${r.isPalindrome}`;
 }
 
-// 2) Chase
-function chaseTime(distanceKm, wolfSpeed=25, rabbitSpeed=18){
-    if (wolfSpeed<=rabbitSpeed) return null;
-    const relativeSpeedKmph = wolfSpeed - rabbitSpeed;
-    const timeHours = distanceKm/relativeSpeedKmph;
-    const totalSeconds = timeHours*3600;
-    const minutes=Math.floor(totalSeconds/60);
-    const seconds=Math.round(totalSeconds - minutes*60);
-    return {minutes, seconds};
+// 2) Чоно ба туулай
+function chaseTime(distance, wolf=25, rabbit=18){
+    if(wolf<=rabbit) return null;
+    let sec = distance / (wolf-rabbit) * 3600;
+    let min = Math.floor(sec/60);
+    sec = Math.round(sec%60);
+    return {min, sec};
 }
 function solveChase(){
     const d = Number(document.getElementById('chaseDistance').value);
     const r = chaseTime(d);
-    const res = r ? `${r.minutes} min ${r.seconds} sec` : 'Wolf cannot catch the rabbit';
-    document.getElementById('chaseResult').innerText = res;
+    document.getElementById('chaseResult').innerText = r ? `${r.min} мин ${r.sec} сек` : 'Чоно туулайг бариж чадахгүй';
 }
 
-// 3) Apartment
-function locateApartment(apartmentNumber,floors=9,entrances=3,aptPerFloor=4){
-    const perEntrance = floors*aptPerFloor;
-    const totalApts = perEntrance*entrances;
-    if(apartmentNumber>totalApts) return {error:`Apartment ${apartmentNumber} does not exist`};
-    const entrance=Math.ceil(apartmentNumber/perEntrance);
-    const within=(apartmentNumber-1)%perEntrance;
-    const floor=Math.floor(within/aptPerFloor)+1;
-    const aptOnFloor=(within%aptPerFloor)+1;
-    return {entrance,floor,aptOnFloor};
+// 3) Орц, давхар, байр
+function locateApartment(n,f=9,e=3,a=4){
+    let perEntrance=f*a;
+    if(n>perEntrance*e) return {error:`Байр ${n} байхгүй`};
+    let entrance=Math.ceil(n/perEntrance);
+    let within=(n-1)%perEntrance;
+    let floor=Math.floor(within/a)+1;
+    let apt=(within%a)+1;
+    return {entrance,floor,apt};
 }
 function locateApt(){
     const n = Number(document.getElementById('aptNumber').value);
     const r = locateApartment(n);
-    document.getElementById('aptResult').innerText = r.error ? r.error : `Entrance ${r.entrance}, Floor ${r.floor}, Apt ${r.aptOnFloor}`;
+    document.getElementById('aptResult').innerText = r.error ? r.error : `Орц ${r.entrance}, Давхар ${r.floor}, Байр ${r.apt}`;
 }
 
 // 4) LCM
-function gcd(a,b){while(b!==0){let t=a%b;a=b;b=t;}return Math.abs(a);}
+function gcd(a,b){while(b){let t=a%b;a=b;b=t;} return Math.abs(a);}
 function lcm(a,b){return Math.abs(a*b)/gcd(a,b);}
 function arrayLCM(arr){return arr.reduce((acc,x)=>lcm(acc,x),1);}
 function calcLCM(){
-    const input = document.getElementById('lcmArray').value;
-    const arr = input.split(',').map(x=>Number(x.trim()));
-    if(arr.length!==5) {document.getElementById('lcmResult').innerText='Enter exactly 5 numbers'; return;}
-    const r=arrayLCM(arr);
-    document.getElementById('lcmResult').innerText=`LCM = ${r}`;
+    let arr = document.getElementById('lcmArray').value.split(',').map(x=>Number(x.trim()));
+    if(arr.length!==5){document.getElementById('lcmResult').innerText='Яг 5 тоо оруулна уу'; return;}
+    document.getElementById('lcmResult').innerText = `LCM = ${arrayLCM(arr)}`;
 }
 
-// 5) Morning/Evening
+// 5) Өглөө/Орой
 function morningOrEveningCompute(x){
-    const hour = new Date().getHours();
-    const isMorning = hour>=6 && hour<12;
-    return isMorning ? x*x : Math.sqrt(x);
+    let h = new Date().getHours();
+    return (h>=6 && h<12) ? x*x : Math.sqrt(x);
 }
 function morningEvening(){
     const x = Number(document.getElementById('morningInput').value);
-    const res = morningOrEveningCompute(x);
-    document.getElementById('morningResult').innerText = `Result = ${res}`;
+    document.getElementById('morningResult').innerText = `Үр дүн = ${morningOrEveningCompute(x)}`;
 }
 </script>
 
