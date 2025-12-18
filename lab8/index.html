@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div id="game-card">
+    <h1>Welcome to Hangman.</h1>
+    <div id="score-display" style="font-weight: bold; margin-bottom: 10px;"></div>
+    
+    <button id="start-btn" onclick="startGame()">Тоглоом эхлэх</button>
+
+    <div id="game-container" style="display:none;">
+        <canvas id="hangmanCanvas" width="180" height="200"></canvas>
+        <div id="question-text"></div>
+        <div id="word-display"></div>
+        <div id="letters-container" class="letters-container"></div>
+        <div id="message"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

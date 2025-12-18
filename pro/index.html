@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    /* Prevents zooming on mobile for better app-like feel */
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kids Paint World 🎨</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,7 +18,9 @@
     </section>
 
     <section id="gallery-screen" class="screen" style="display: none;">
-        <button class="btn-back" onclick="showScreen('home-screen')">⬅ Back</button>
+        <div class="gallery-nav">
+             <button class="btn-back" onclick="showScreen('home-screen')">⬅ Back to Home</button>
+        </div>
         <h2>Pick a Picture to Color!</h2>
         <div class="grid-container" id="imageGallery">
             </div>
@@ -34,35 +37,29 @@
                 <div class="color-btn" style="background: #FF6600;" onclick="changeColor('#FF6600')"></div>
                 <div class="color-btn" style="background: #FFD700;" onclick="changeColor('#FFD700')"></div>
                 <div class="color-btn" style="background: #FF69B4;" onclick="changeColor('#FF69B4')"></div>
-    
                 <div class="color-btn" style="background: #32CD32;" onclick="changeColor('#32CD32')"></div>
                 <div class="color-btn" style="background: #008000;" onclick="changeColor('#008000')"></div>
                 <div class="color-btn" style="background: #00BFFF;" onclick="changeColor('#00BFFF')"></div>
                 <div class="color-btn" style="background: #0000FF;" onclick="changeColor('#0000FF')"></div>
-    
                 <div class="color-btn" style="background: #8A2BE2;" onclick="changeColor('#8A2BE2')"></div>
-                <div class="color-btn" style="background: #4B0082;" onclick="changeColor('#4B0082')"></div>
-                <div class="color-btn" style="background: #008080;" onclick="changeColor('#008080')"></div>
-                <div class="color-btn" style="background: #40E0D0;" onclick="changeColor('#40E0D0')"></div>
-
-                <div class="color-btn" style="background: #8B4513;" onclick="changeColor('#8B4513')"></div>
-                <div class="color-btn" style="background: #A0522D;" onclick="changeColor('#A0522D')"></div>
                 <div class="color-btn" style="background: #000000;" onclick="changeColor('#000000')"></div>
-                <div class="color-btn" style="background: #FFFFFF;" onclick="changeColor('#FFFFFF')"></div>
+                <div class="color-btn" style="background: #FFFFFF; border: 2px solid #ccc;" onclick="changeColor('#FFFFFF')"></div>
             </div>
             
-            <input type="range" id="brushSize" min="5" max="30" value="12">
+            <div class="controls-row">
+                <label for="brushSize">Size:</label>
+                <input type="range" id="brushSize" min="5" max="50" value="15">
+            </div>
             
             <div class="actions">
-                <button class="btn-action btn-clear" onclick="clearCanvas()">🧹 Clear</button>
+                <button class="btn-action btn-clear" onclick="clearCanvas()">🧹 Reset</button>
                 <button class="btn-action btn-save" onclick="downloadImage()">💾 Save</button>
             </div>
         </div>
 
         <div id="painting-zone">
             <canvas id="paintCanvas"></canvas>
-            <img id="overlay-img" src="" alt="">
-        </div>
+            </div>
     </section>
 
     <script src="script.js"></script>
