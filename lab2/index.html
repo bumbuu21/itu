@@ -2,227 +2,148 @@
 <html lang="mn">
 <head>
     <meta charset="UTF-8">
-    <title>5 хуудсын танилцуулга</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Mongolia UI Replica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav {
-            width: 200px;
-            height: 100vh; 
-            padding-top: 20px;
-            box-sizing: border-box;
-        }
-
-        nav table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        nav td {
-            border: 1px solid #121111;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: rgb(26, 25, 25);
-            font-weight: bold;
-            display: block;
-        }
-
-        nav a:hover {
-            color: #391bbc;
-        }
-
-        .content {
-            flex: 1;
-            padding: 20px;
-        }
-
-        .page {
-            display: none;
-        }
-
-        .active {
-            display: block;
+        /* Custom Fonts & Tweaks */
+        body { font-family: 'Inter', sans-serif; background-color: #F3F5F9; }
+        .brand-blue { color: #0052CC; }
+        .bg-brand-blue { background-color: #0052CC; }
+        .hero-gradient {
+            background: linear-gradient(180deg, #E6F0FF 0%, #F3F5F9 100%);
         }
     </style>
 </head>
-<body>
+<body class="text-slate-700">
 
-    <nav>
-        <table>
-            <tr><td><a href="#" onclick="showPage('home')">Нүүр</a></td></tr>
-            <tr><td><a href="#" onclick="showPage('about')">Миний тухай</a></td></tr>
-            <tr><td><a href="#" onclick="showPage('family')">Миний гэр бүл</a></td></tr>
-            <tr><td><a href="#" onclick="showPage('friends')">Найзууд</a></td></tr>
-            <tr><td><a href="#" onclick="showPage('contact')">Холбоо барих</a></td></tr>
-        </table>
-    </nav>
-
-    <div class="content">
-
-        <div id="home" class="page active">
-            <h2>Нүүр хуудас</h2>
-            <p>Cайн бну.</p>
+    <div class="bg-white border-b border-gray-200 text-xs py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-4 text-gray-500">
+                <a href="#" class="hover:text-blue-600">For Foreigners</a>
+                <a href="#" class="hover:text-blue-600">Монгол бичгийн хувилбар</a>
+            </div>
+            <div class="flex space-x-4 text-gray-500">
+                <span><i class="fas fa-cloud text-yellow-400"></i> -11.9°C</span>
+                <span><i class="fas fa-dollar-sign text-green-500"></i> Ханш</span>
+                <span><i class="far fa-calendar-alt text-blue-500"></i> 12 сарын 19</span>
+            </div>
         </div>
+    </div>
 
-        <div id="about" class="page">
-            <h2>Миний тухай</h2>
-
-            <img src="D:\Screenshots\Screenshot 2024-09-15 164152.png" alt="Миний зураг" style="width:200px; border-radius:10px; float:left; margin-right:20px;">
-
-            <header>
-                <h1>Б.Бат-Өрнөх</h1>
-            </header>
-
-            <div class="container">
-                <div class="section">
-                    <h2>Намтар</h2>
-                    <p>Би компьютерийн ухааны оюутан бөгөөд вэб хөгжүүлэлт, алгоритм, шинэ технологи сурах сонирхолтой.</p>
+    <header class="bg-white py-4 shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="border-2 border-blue-600 rounded-lg px-2 py-1 text-2xl font-bold text-blue-600">
+                    e<span class="text-slate-800">mongolia</span>
                 </div>
+            </div>
 
-                <div class="section">
-                    <h2>Боловсрол</h2>
-                    <ul>
-                        <li>Компьютерийн ухааны бакалавр – Монгол Улсын Их Сургууль (2022–2026)</li>
-                    </ul>
+            <div class="flex items-center space-x-4">
+                <button class="flex flex-col items-center text-xs text-gray-600 hover:text-blue-600">
+                    <i class="fas fa-search text-lg mb-1"></i>
+                    Хайлт
+                </button>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-semibold transition flex items-center gap-2">
+                    <i class="far fa-user-circle"></i> Нэвтрэх
+                </button>
+                <button class="p-2 bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center text-blue-600">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="p-2 bg-blue-100 rounded-full w-10 h-10 flex items-center justify-center text-blue-600">
+                    <i class="fas fa-universal-access"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-gradient py-16 text-center relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <h1 class="text-3xl font-bold text-slate-800 mb-8">
+                Төрийн үйлчилгээ, мэдээллийг нэг дороос...
+            </h1>
+
+            <div class="max-w-4xl mx-auto relative group">
+                <div class="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none">
+                    <i class="fas fa-search text-blue-400 text-xl"></i>
                 </div>
+                <input type="text" 
+                       class="w-full pl-14 pr-6 py-4 rounded-full border-2 border-blue-400 focus:border-blue-600 focus:outline-none shadow-lg text-lg transition" 
+                       placeholder="Үйлчилгээ, хууль, яам, засгийн газрын нэгжүүдээр хайх...">
+            </div>
+        </div>
+    </section>
 
-                <div class="section">
-                    <h2>Ур чадвар</h2>
-                    <ul>
-                        <li>Програмчлал: C, C++, Python</li>
-                        <li>Вэб хөгжүүлэлт: HTML, CSS, JavaScript</li>
-                        <li>Өгөгдлийн сан: MySQL</li>
-                    </ul>
+    <section class="py-10">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-slate-800 mb-2">Хялбар хандалт</h2>
+            <p class="text-gray-500 mb-6">Хэрэгтэй мэдээлэлдээ хурдан, хялбар замаар хүрээрэй.</p>
+
+            <div class="flex flex-wrap gap-3">
+                <a href="#" class="px-5 py-3 bg-white rounded-full shadow-sm border border-gray-100 text-gray-700 hover:shadow-md hover:text-blue-600 transition">
+                    Апостиль гэрчилгээ
+                </a>
+                <a href="#" class="px-5 py-3 bg-white rounded-full shadow-sm border border-gray-100 text-gray-700 hover:shadow-md hover:text-blue-600 transition">
+                    Төлбөр төлөх
+                </a>
+                <a href="#" class="px-5 py-3 bg-white rounded-full shadow-sm border border-gray-100 text-gray-700 hover:shadow-md hover:text-blue-600 transition">
+                    Гэр бүл
+                </a>
+                <a href="#" class="px-5 py-3 bg-white rounded-full shadow-sm border border-gray-100 text-gray-700 hover:shadow-md hover:text-blue-600 transition">
+                    Үл хөдлөх хөрөнгө
+                </a>
+                <a href="#" class="px-5 py-3 bg-white rounded-full shadow-sm border border-gray-100 text-gray-700 hover:shadow-md hover:text-blue-600 transition">
+                    Нийслэлийн цэцэрлэгийн үр дүн
+                </a>
+                <a href="#" class="px-5 py-3 bg-white rounded-full shadow-sm border border-gray-100 text-gray-700 hover:shadow-md hover:text-blue-600 transition">
+                    Зээлийн мэдээлэл
+                </a>
+                <a href="#" class="px-5 py-3 bg-white rounded-full shadow-sm border border-gray-100 text-gray-700 hover:shadow-md hover:text-blue-600 transition">
+                    Нийгмийн даатгалын лавлагаа
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 pb-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-slate-800 mb-2">Хөтөч</h2>
+            <p class="text-gray-500 mb-6">Амьдралынхаа аль ч үед хэрэгтэй бүхнийг хийх, мэдэх хувийн хөтөчтэй байгаарай.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition cursor-pointer">
+                    <span class="font-semibold text-lg text-slate-800">Хууль сахиулах</span>
+                    <img src="https://img.icons8.com/color/48/police-badge.png" alt="icon">
                 </div>
-
-                <div class="section">
-                    <h2>Туршлага</h2>
-                    <ul>
-                        <li>Tech Company-д дадлагажигч – Вэбсайт хийх болон өгөгдлийн сан удирдахад тусалсан.</li>
-                    </ul>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition cursor-pointer">
+                    <span class="font-semibold text-lg text-slate-800">Цэргийн алба</span>
+                    <img src="https://img.icons8.com/color/48/military-badge.png" alt="icon">
                 </div>
-
-                <div class="section">
-                    <h2>Хобби</h2>
-                    <p>Шатар, Тех блог унших, Хөлбөмбөг тоглох</p>
+                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition cursor-pointer">
+                    <span class="font-semibold text-lg text-slate-800">Бичиг баримт</span>
+                    <img src="https://img.icons8.com/color/48/documents.png" alt="icon">
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition cursor-pointer">
+                    <span class="font-semibold text-lg text-slate-800">Хүүхэд</span>
+                    <img src="https://img.icons8.com/color/48/toys.png" alt="icon">
                 </div>
             </div>
         </div>
+    </section>
 
-        <div id="family" class="page">
-    <h2>Миний гэр бүл</h2>
-
-    <img src="D:\Screenshots\flat-design-family-symbol_23-2149282971.jpg" alt="Миний гэр бүл" 
-         style="width:300px; border-radius:10px; float:left; margin-right:20px; margin-bottom:10px;">
-
-    <table border="1" cellpadding="10" cellspacing="0" 
-           style="border-collapse: collapse; width: 70%; margin-top: 10px;">
-        <thead>
-            <tr style="background-color: #9ce36a; color: white;">
-                <th>Гишүүн</th>
-                <th>Нэр</th>
-                <th>Мэргэжил / Тайлбар</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Аав</td>
-                <td>Батаахүү</td>
-                <td>Цахилгааны инженер</td>
-            </tr>
-            <tr>
-                <td>Ээж</td>
-                <td>Золзаяа</td>
-                <td>Нягтлан</td>
-            </tr>
-            <tr>
-                <td>Том дүү</td>
-                <td>Бат-Очир</td>
-                <td>Дунд анги</td>
-            </tr>
-            <tr>
-                <td>Бага дүү</td>
-                <td>Алтан-Очир</td>
-                <td>Цэцэрлэг</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-
-        <div id="friends" class="page">
-            <h2>Найзууд</h2>
-            <p>Миний ойрын найзууд:</p>
-
-            <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 80%; margin-top: 10px;">
-                <thead>
-                    <tr style="background-color: #6a93ae; color: white;">
-                        <th>Нэр</th>
-                        <th>Нас</th>
-                        <th>Мэргэжил</th>
-                        <th>Since</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Энх-Эрдэнэ</td>
-                        <td>20</td>
-                        <td>Механик</td>
-                        <td>2015</td>
-                    </tr>
-                    <tr>
-                        <td>Цэндпүрэв</td>
-                        <td>21</td>
-                        <td>Онцгой...</td>
-                        <td>2010</td>
-                    </tr>
-                    <tr>
-                        <td>Цэрэндагва</td>
-                        <td>21</td>
-                        <td>Механик</td>
-                        <td>2010</td>
-                    </tr>
-                    <tr>
-                        <td>Мөнх-Эрдэнэ</td>
-                        <td>21</td>
-                        <td>Цэрэг</td>
-                        <td>2010</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div id="contact" class="page">
-            <h2>Холбоо барих</h2>
-            <p>Имэйл: 22b1num1281@stud.num.edu.mn</p>
-            <p>Утас: 99130584</p>
-            <p>Байршил: Улаанбаатар, Монгол</p>
-
-            <p>
-                <a href="https://www.facebook.com/baturnukh.bumbuu" target="_blank">Facebook</a> | 
-                <a href="https://www.instagram.com/sschlorine/" target="_blank">Instagram</a>
-            </p>
-        </div>
-
-
+    <div class="fixed bottom-8 right-8 flex flex-col gap-3">
+        <button class="bg-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:text-blue-600">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+        <button class="bg-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:text-blue-600">
+            <i class="fas fa-headset"></i>
+        </button>
+        <button class="bg-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:text-blue-600">
+            <i class="fas fa-robot"></i>
+        </button>
     </div>
-
-    <script>
-        function showPage(pageId) {
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(p => p.classList.remove('active'));
-            document.getElementById(pageId).classList.add('active');
-        }
-    </script>
 
 </body>
 </html>

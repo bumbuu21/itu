@@ -13,24 +13,19 @@ body {
     color: #333; 
 }
 
-/* --- Top Logo Bar Styling (Шинээр нэмэгдсэн) --- */
 .top-logo-bar {
     background-color: var(--2ndblue);
-    padding: 10px 0; /* Дээд доод зай */
+    padding: 10px 0; 
 }
 
 .webjunto-logo-text {
     color: white;
     font-weight: 700;
-    font-size: 1.5em; /* Зурагт тодорхой харагдахгүй байгаа тул ойролцоогоор тааруулсан */
-    /* Зурагт лого нь зураг (SVG/PNG) хэлбэрээр байсан ч бид текстийг ашиглан байрлуулав. */
-    /* Лого нь зүүн талд контейнер дотор байрлана. */
+    font-size: 1.5em; /
+   
 }
 
-/* --- Jumbotron Styling (Өөрчлөгдсөн: Logo Bar-ийн дараа байрлаж байна) --- */
 .full-width-jumbotron {
-    /* Logo bar-т background-color: var(--primary-navy)-г ашигласан тул энэ хэсгийг
-       зурагтай ижил болгохын тулд background-ийг өөрчлөхгүйгээр үлдээсэн. */
     background-color: var(--primary-navy); 
     color: white;
     margin-bottom: 20px;
@@ -43,22 +38,21 @@ body {
     border-color: var(--accent-pink);
     font-weight: 700;
     border-radius: 0;
-    padding: 10px 30px; /* Товчлуурын хэмжээг тохируулах */
+    padding: 10px 30px; 
 }
 
 .learn-more-btn:hover,
 .learn-more-btn:focus {
-    background-color: #E00A52; /* Бага зэрэг бараандуу */
+    background-color: #E00A52; 
     border-color: #E00A52;
 }
 
-/* --- Main Content Styling --- */
 .main-content-container {
     padding-top: 20px;
 }
 
 h2 {
-    font-weight: 700; /* Heading goes here */
+    font-weight: 700; 
     margin-top: 0;
     padding-bottom: 10px;
 }
@@ -67,7 +61,7 @@ h2 {
 .video-container {
     margin-top: 20px;
     margin-bottom: 5px;
-    border: 1px solid #ddd; /* Зураг дээр бага зэргийн хүрээтэй харагдаж байна */
+    border: 1px solid #ddd; 
 }
 
 .video-caption {
@@ -77,7 +71,6 @@ h2 {
     padding-left: 5px;
 }
 
-/* Footer Alert (Whoa! This is a super imporant alert!) */
 .footer-alert {
     background-color: #eee;
     color: #555;
@@ -92,9 +85,7 @@ h2 {
     font-weight: 700;
 }
 
-/* --- Sidebar Styling --- */
 
-/* Messages Panel */
 .messages-panel {
     border: none;
     box-shadow: none;
@@ -106,7 +97,7 @@ h2 {
     font-weight: 700;
     text-align: center;
     border: none;
-    border-radius: 0; /* Булангуудыг тэгшлэх */
+    border-radius: 0; 
     padding: 10px;
 }
 
@@ -132,7 +123,7 @@ h2 {
     background-color: var(--accent-pink);
     border-color: var(--accent-pink);
     font-weight: 700;
-    width: 100%; /* Бүтэн өргөн */
+    width: 100%; 
     margin-top: 10px;
     border-radius: 0;
 }
@@ -146,12 +137,12 @@ h2 {
 .small-text-link a {
     color: var(--accent-grey);
     font-size: 0.9em;
-    font-weight: 400; /* Lato Regular */
-    text-decoration: none; /* Зурагт зураасгүй харагдаж байна */
+    font-weight: 400; 
+    text-decoration: none; 
 }
 
 .small-text-link a:hover {
-    color: #fff; /* Hover үед цагаан болгох */
+    color: #fff; 
 }
 
 /* Vote Panel */
@@ -159,7 +150,7 @@ h2 {
     border: 1px solid #ddd;
     box-shadow: none;
     border-radius: 0;
-    margin-top: 30px; /* Зураг дээр зайтай харагдаж байна */
+    margin-top: 30px; 
 }
 
 .vote-panel h4 {
@@ -169,18 +160,18 @@ h2 {
 }
 
 .vote-buttons {
-    display: flex; /* Товчлууруудыг зэрэгцүүлэх */
+    display: flex; 
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
 .btn-vote {
-    flex: 1; /* Адилхан өргөн авах */
+    flex: 1; 
     padding: 8px 0;
     border-radius: 0;
     font-weight: 700;
     margin: 0 5px;
-    text-shadow: none; /* Bootstrap-ийн default-г арилгах */
+    text-shadow: none; 
 }
 
 .cool-btn {
@@ -207,24 +198,21 @@ h2 {
     color: #555;
 }
 
-/* Progress Bar Customization */
 .vote-progress-bar {
-    height: 12px; /* Бага зэрэг өндөрлөх */
+    height: 12px; 
     margin-bottom: 0;
-    border-radius: 0; /* Bootstrap-ийн булангийн бөөрөнхийг арилгах */
+    border-radius: 0; 
 }
 
-/* 2 хэсэгт хуваагдах progress bar-ийн өнгө */
 .progress-bar-cool {
     background-color: var(--accent-pink);
 }
 
 .progress-bar-lame {
     background-color: var(--accent-green);
-    float: right; /* Баруун талруу шилжүүлэх */
+    float: right; 
 }
 
-/* --- Footer Styling --- */
 .main-footer {
     background-color: var(--primary-navy);
     color: white;
@@ -233,39 +221,31 @@ h2 {
     font-size: 0.9em;
 }
 
-/* -------------------------------------------
-   Даалгавар 3-т Responsive хийх (Media Queries)
-   ------------------------------------------- */
-/* Bootstrap 3-т, grid system өөрөө responsive тул ихэнх зүйлс автоматаар таарна.
-   Гэхдээ жижиг дэлгэц дээр зарим элементийг нэмж тохируулах шаардлагатай. */
-
 @media (max-width: 991px) {
-    /* Tablet (sm) болон түүнээс доош дэлгэц */
     .col-md-8, .col-md-4 {
-        width: 100%; /* Бүтэн өргөн авах */
+        width: 100%; 
     }
 
     .sidebar-container {
-        margin-top: 30px; /* Гол агуулгатай зай үүсгэх */
+        margin-top: 30px; 
     }
 
     .footer-alert {
-        margin-top: 10px; /* Жижиг дэлгэц дээр зайг багасгах */
+        margin-top: 10px; 
         margin-bottom: 10px;
     }
 }
 
 @media (max-width: 767px) {
-    /* Гар утас (xs) дэлгэц */
     .full-width-jumbotron h1 {
-        font-size: 2.5em; /* Том гарчгийг багасгах */
+        font-size: 2.5em; 
     }
 
     .vote-buttons {
-        flex-direction: column; /* Товчлууруудыг доош нь эгнүүлэх */
+        flex-direction: column;
     }
 
     .btn-vote {
-        margin: 5px 0; /* Товчлууруудын хооронд зай үүсгэх */
+        margin: 5px 0; 
     }
 }

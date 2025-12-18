@@ -1,179 +1,332 @@
 <!DOCTYPE html>
 <html lang="mn">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO Title & Description -->
-    <title>E-Mongolia Clone – Төрийн үйлчилгээ нэг дор</title>
-    <meta name="description" content="E-Mongolia үйлчилгээг дуурайсан төсөл. Төрийн үйлчилгээний цахим нүүр хуудас — хурдан, хялбар, нэг дор." />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://example.com/" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png" />
-
-    <!-- Preload Critical CSS -->
-    <link rel="preload" href="style.css" as="style" />
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- Social Meta Tags -->
-    <meta property="og:title" content="E-Mongolia Clone" />
-    <meta property="og:description" content="Таны төрийн үйлчилгээ нэг дор — e-Mongolia загвар веб." />
-    <meta property="og:image" content="https://example.com/thumbnail.jpg" />
-    <meta property="og:type" content="website" />
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "E-Mongolia Clone",
-      "url": "https://example.com/",
-      "description": "E-Mongolia үйлчилгээг дуурайсан төсөл веб сайт.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Student Dev"
-      }
-    }
-    </script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);} 
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXX');
-    </script>
-
-    <!-- robots.txt notice -->
-    <meta name="robots" content="index, follow">
-
-    <!-- Lazy loading default -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('img').forEach(img => img.setAttribute('loading','lazy'));
-        });
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Mongolia Combined Replica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="text-slate-700 relative">
 
-    <!-- HEADER -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <div class="logo">e-Mongolia</div>
-            <nav class="nav-links">
-                <a href="#services">Үйлчилгээ</a>
-                <a href="#program">Хөтөлбөр</a>
-                <a href="#news">Мэдээ</a>
-                <a href="#about">Тухай</a>
-            </nav>
-            <button class="login-btn">Нэвтрэх</button>
-            <div class="menu-btn">☰</div>
+    <div class="bg-white border-b border-gray-200 text-xs py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-6 text-gray-500 font-medium">
+                <a href="#" class="hover:text-blue-600">For Foreigners</a>
+                <a href="#" class="hover:text-blue-600">Монгол бичгийн хувилбар</a>
+            </div>
+            <div class="flex space-x-6 text-gray-500 font-medium">
+                <span class="flex items-center gap-1"><i class="fas fa-cloud text-yellow-400"></i> -11.9°C</span>
+                <span class="flex items-center gap-1"><i class="fas fa-dollar-sign text-green-500"></i> Ханш</span>
+                <span class="flex items-center gap-1"><i class="far fa-calendar-alt text-blue-500"></i> 12 сарын 19</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-white py-4 sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <div class="border-2 border-blue-600 rounded-lg px-2 py-0.5 text-2xl font-bold text-blue-600 leading-none">
+                    e<span class="text-slate-800">mongolia</span>
+                </div>
+                <i class="fas fa-moon ml-4 text-slate-400 text-lg"></i>
+            </a>
+
+            <div class="flex items-center space-x-5">
+                <button class="flex flex-col items-center text-[10px] text-gray-600 hover:text-blue-600">
+                    <i class="fas fa-search text-lg mb-1"></i>
+                    Хайлт
+                </button>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-semibold transition flex items-center gap-2 shadow-lg shadow-blue-200">
+                    <i class="far fa-user-circle"></i> Нэвтрэх
+                </button>
+                <button class="p-2 bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center text-blue-600 hover:bg-blue-50">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="p-2 bg-blue-100 rounded-full w-10 h-10 flex items-center justify-center text-blue-600 hover:bg-blue-200">
+                    <i class="fas fa-universal-access"></i>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero" id="home">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Таны төрийн үйлчилгээ нэг дор</h1>
-                <p>Хэзээ ч, хаанаас ч төрийн үйлчилгээ авах боломж.</p>
-                <a href="#services"><button class="cta">Үйлчилгээ үзэх</button></a>
+    <section class="hero-bg pt-16 pb-32">
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-10 tracking-tight">
+                Төрийн үйлчилгээ, мэдээллийг нэг дороос...
+            </h1>
+
+            <div class="max-w-4xl mx-auto relative group mb-16">
+                <div class="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none">
+                    <span class="text-blue-400 text-lg font-bold">⌘</span>
+                </div>
+                <input type="text" 
+                       class="w-full pl-14 pr-6 py-4 rounded-full border-2 border-blue-300 focus:border-blue-600 focus:ring-4 focus:ring-blue-100 focus:outline-none shadow-xl text-lg transition placeholder-gray-300" 
+                       placeholder="Үйлчилгээ, хууль, яам, засгийн газрын нэгжүүдээр хайх...">
             </div>
-            <div class="hero-img">
-                <img src="https://cdn.jsdelivr.net/gh/batresource/em-assets/hero.png" alt="e-mongolia" />
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto text-left">
+                <div class="bg-blue-800 rounded-2xl p-6 text-white h-40 relative overflow-hidden group cursor-pointer">
+                    <h3 class="font-bold text-xl relative z-10">Төрийн байгууллагууд</h3>
+                    <button class="mt-4 px-4 py-1 border border-white/50 rounded-full text-sm hover:bg-white hover:text-blue-900 transition relative z-10">Дэлгэрэнгүй</button>
+                    <div class="icon-overlay" style="background-image: url('https://img.icons8.com/ios-filled/100/ffffff/bank-building.png');"></div>
+                </div>
+                 <div class="bg-blue-600 rounded-2xl p-6 text-white h-40 relative overflow-hidden group cursor-pointer">
+                    <h3 class="font-bold text-xl relative z-10">Үйлчилгээ авах</h3>
+                    <button class="mt-4 px-4 py-1 border border-white/50 rounded-full text-sm hover:bg-white hover:text-blue-900 transition relative z-10">Дэлгэрэнгүй</button>
+                    <div class="icon-overlay" style="background-image: url('https://img.icons8.com/ios-filled/100/ffffff/service.png');"></div>
+                </div>
+                 <div class="bg-blue-500 rounded-2xl p-6 text-white h-40 relative overflow-hidden group cursor-pointer">
+                    <h3 class="font-bold text-xl relative z-10">Цахим сургалт</h3>
+                    <button class="mt-4 px-4 py-1 border border-white/50 rounded-full text-sm hover:bg-white hover:text-blue-900 transition relative z-10">Дэлгэрэнгүй</button>
+                    <div class="icon-overlay" style="background-image: url('https://img.icons8.com/ios-filled/100/ffffff/classroom.png');"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2>Төрийн үйлчилгээ</h2>
-            <div class="service-grid">
-                <div class="service-card">Иргэний бүртгэл</div>
-                <div class="service-card">Эрүүл мэнд</div>
-                <div class="service-card">Татвар</div>
-                <div class="service-card">Нийгмийн даатгал</div>
-                <div class="service-card">Газар</div>
-                <div class="service-card">Боловсрол</div>
-                <div class="service-card">Аж ахуй</div>
-                <div class="service-card">Шүүх</div>
+    <section class="py-12 bg-[#F3F5F9]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-slate-800 mb-2">Хялбар хандалт</h2>
+            <p class="text-gray-500 mb-6 text-sm">Хэрэгтэй мэдээлэлдээ хурдан, хялбар замаэр хүрээрэй.</p>
+
+            <div class="flex flex-wrap gap-3 mb-16">
+                <a href="#" class="pill-btn">Апостиль гэрчилгээ</a>
+                <a href="#" class="pill-btn">Төлбөр төлөх</a>
+                <a href="#" class="pill-btn">Гэр бүл</a>
+                <a href="#" class="pill-btn">Үл хөдлөх хөрөнгө</a>
+                <a href="#" class="pill-btn">Нийслэлийн цэцэрлэгийн үр дүн</a>
+                <a href="#" class="pill-btn">Зээлийн мэдээлэл</a>
+                <a href="#" class="pill-btn">Нийгмийн даатгалын лавлагаа</a>
+                <a href="#" class="pill-btn">Тээврийн хэрэгслийн торгууль</a>
+                <a href="#" class="pill-btn">Шинжилгээний хариу</a>
+                <a href="#" class="pill-btn">Эмнэлгийн цаг захиалах</a>
+                <a href="#" class="pill-btn">Дипломын тодорхойлолт</a>
+                <a href="#" class="pill-btn">Лавлагаа, тодорхойлолт шалгах</a>
+                <a href="#" class="pill-btn">Нийтийн тээврийн тасалбар захиалга</a>
+            </div>
+
+            <h2 class="text-2xl font-bold text-slate-800 mb-2">Хөтөч</h2>
+            <p class="text-gray-500 mb-6 text-sm">Амьдралынхаа аль ч үед хэрэгтэй бүхнийг хийх, мэдэх хувийн хөтөчтэй байгаарай.
+            <button class="bg-[#EBF3FF] text-[#0052CC] px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-100 transition">
+                Бүгдийг үзэх
+            </button>
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="guide-card"><span>Хууль сахиулах</span> <img src="https://img.icons8.com/color/48/police-badge.png" alt="icon"></div>
+                <div class="guide-card"><span>Цэргийн алба</span> <img src="https://img.icons8.com/color/48/military-badge.png" alt="icon"></div>
+                <div class="guide-card"><span>Бичиг баримт</span> <img src="https://img.icons8.com/color/48/documents.png" alt="icon"></div>
+                <div class="guide-card"><span>Хүүхэд</span> <img src="https://img.icons8.com/color/48/toys.png" alt="icon"></div>
+                <div class="guide-card"><span>Гадаад явах</span> <img src="https://img.icons8.com/color/48/around-the-globe.png" alt="icon"></div>
+                <div class="guide-card"><span>Эрүүл мэнддээ анхаарах</span> <img src="https://img.icons8.com/color/48/health-checkup.png" alt="icon"></div>
+                <div class="guide-card"><span>Зээлийн мэдээлэл</span> <img src="https://img.icons8.com/color/48/money-bag.png" alt="icon"></div>
             </div>
         </div>
     </section>
 
-    <!-- PROGRAM SECTION -->
-    <section class="program" id="program" style="padding:60px 0; background:white;">
-        <div class="container">
-            <h2>Хөтөлбөрүүд</h2>
-            <p>Иргэдэд зориулсан цахим үйлчилгээний шинэ боломжууд.</p>
-        </div>
-    </section>
-
-    <!-- NEWS SECTION -->
-    <section class="news" id="news" style="padding:60px 0; background:#f5f7fb;">
-        <div class="container">
-            <h2>Мэдээ мэдээлэл</h2>
-            <p>Цахим шилжилтийн талаарх хамгийн сүүлийн үеийн мэдээллүүд.</p>
-        </div>
-    </section>
-
-    <!-- STATS -->
-    <section class="stats">
-        <div class="container stats-flex">
-            <div class="stat-box"><h3>700+</h3><p>Төрийн үйлчилгээ</p></div>
-            <div class="stat-box"><h3>3.5M+</h3><p>Иргэн ашиглаж байна</p></div>
-            <div class="stat-box"><h3>24/7</h3><p>Онлайн үйлчилгээ</p></div>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section class="about" id="about" style="padding:60px 0; background:white;">
-        <div class="container">
-            <h2>Бидний тухай</h2>
-            <p>e-Mongolia нь төрийн үйлчилгээг иргэдэд хүргэх цахим нэгдсэн платформ юм.</p>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container footer-flex">
-            <div>
-                <h3>e-Mongolia</h3>
-                <p>Цахим үйлчилгээний нэгдсэн систем.</p>
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800 mb-1">Мэдээ мэдээлэл</h2>
+                    <p class="text-gray-500 text-sm">Өнөөдрийн хамгийн чухал үйл явдлуудыг эндээс уншаарай</p>
+                </div>
+                <button class="bg-gray-100 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-200">Бүгдийг үзэх</button>
             </div>
-            <div class="footer-links">
-                <a href="#services">Үйлчилгээ</a>
-                <a href="#about">Тусламж</a>
-                <a href="#privacy">Нууцлал</a>
-                <a href="#contact">Холбоо барих</a>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-1 bg-green-700 rounded-xl overflow-hidden relative h-96 group cursor-pointer">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg" class="absolute w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-500">
+                    <div class="absolute bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent w-full">
+                        <span class="text-xs text-green-300 bg-green-900 px-2 py-1 rounded">Боловсролын яам</span>
+                        <h3 class="text-white font-bold mt-2 text-xl leading-tight uppercase">ХОЛБООНЫ БҮГД НАЙРАМДАХ БРАЗИЛ УЛС...</h3>
+                        <p class="text-gray-300 text-xs mt-2">2025-11-11</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="news-card">
+                        <div class="bg-blue-900 w-24 h-24 rounded-lg flex-shrink-0 flex items-center justify-center text-white text-xs text-center p-1">
+                            POSTER IMG
+                        </div>
+                        <div class="flex flex-col justify-between ml-3 w-full">
+                            <div>
+                                <p class="text-xs text-gray-500 mb-1">Боловсролын ерөнхий газар</p>
+                                <h4 class="font-bold text-slate-800 text-sm line-clamp-2">ТӨРИЙН БОЛОН ОРОН НУТГИЙН БАЙГУУЛЛАГУУД 2025 ОНЫ 01...</h4>
+                            </div>
+                            <div class="flex justify-between items-center text-xs text-gray-400 mt-2">
+                                <span class="flex gap-2"><i class="far fa-thumbs-up"></i> 2 <i class="far fa-thumbs-down"></i></span>
+                                <span>2025-11-10</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="bg-orange-100 w-24 h-24 rounded-lg flex-shrink-0 flex flex-col items-center justify-center text-orange-600 font-bold">
+                            <span class="text-2xl">154</span>
+                        </div>
+                        <div class="flex flex-col justify-between ml-3 w-full">
+                            <div>
+                                <p class="text-xs text-gray-500 mb-1">Онцгой байдлын ерөнхий газар</p>
+                                <h4 class="font-bold text-slate-800 text-sm line-clamp-2">Алба хаагчид 3798 хүний амь нас, 390.2 тэрбум төгрөгийн...</h4>
+                            </div>
+                            <div class="flex justify-between items-center text-xs text-gray-400 mt-2">
+                                <span class="flex gap-2"><i class="far fa-thumbs-up"></i> 0 <i class="far fa-thumbs-down"></i></span>
+                                <span>2025-10-14</span>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="news-card">
+                        <img src="https://via.placeholder.com/100" class="w-24 h-24 rounded-lg object-cover">
+                        <div class="flex flex-col justify-between ml-3 w-full">
+                            <div>
+                                <p class="text-xs text-gray-500 mb-1">И Монгол академи</p>
+                                <h4 class="font-bold text-slate-800 text-sm line-clamp-2">E-Mongolia системийн таван жилийн хөгжил: 2 сая хэрэглэг...</h4>
+                            </div>
+                            <div class="flex justify-between items-center text-xs text-gray-400 mt-2">
+                                <span class="flex gap-2"><i class="far fa-thumbs-up"></i> 1 <i class="far fa-thumbs-down"></i></span>
+                                <span>2025-10-01</span>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="news-card">
+                        <img src="https://via.placeholder.com/100" class="w-24 h-24 rounded-lg object-cover">
+                        <div class="flex flex-col justify-between ml-3 w-full">
+                            <div>
+                                <p class="text-xs text-gray-500 mb-1">И Монгол академи</p>
+                                <h4 class="font-bold text-slate-800 text-sm line-clamp-2">"E-Mongolia"-аас 12 төрлийн лавлагаа тодорхойлолт...</h4>
+                            </div>
+                            <div class="flex justify-between items-center text-xs text-gray-400 mt-2">
+                                <span class="flex gap-2"><i class="far fa-thumbs-up"></i> 2 <i class="far fa-thumbs-down"></i></span>
+                                <span>2025-09-23</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-slate-800 mb-12">Нээлттэй мэдээлэл</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-4">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-number">3,544,835</div>
+                    <div class="stat-label">Хүн амын тоо</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <div class="stat-number">8.8%</div>
+                    <div class="stat-label">Инфляцын түвшин</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-box"></i>
+                    <div class="stat-number">40.3 их наяд</div>
+                    <div class="stat-label">Дотоодын нийт бүтээгдэхүүн</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-briefcase"></i>
+                    <div class="stat-number">4.5%</div>
+                    <div class="stat-label">Ажилгүйдлийн түвшин</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-horse"></i>
+                    <div class="stat-number">57.6 сая</div>
+                    <div class="stat-label">Малын тоо</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-home"></i>
+                    <div class="stat-number">3.0 сая</div>
+                    <div class="stat-label">Өрхийн дундаж орлого</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <div class="stat-number">2.4 сая</div>
+                    <div class="stat-label">Дундаж цалин</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-user-tie"></i>
+                    <div class="stat-number">61.9%</div>
+                    <div class="stat-label">Ажиллах хүчний оролцоо</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark-footer text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="border-2 border-white rounded-lg px-2 py-0.5 text-2xl font-bold text-white leading-none">
+                            e<span class="text-white">mongolia</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button class="store-btn">
+                            <i class="fab fa-apple text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-[8px]">Download on the</div>
+                                <div class="font-bold">App Store</div>
+                            </div>
+                        </button>
+                        <button class="store-btn">
+                            <i class="fab fa-google-play text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-[8px]">GET IT ON</div>
+                                <div class="font-bold">Google Play</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="text-sm text-gray-300">
+                    <h4 class="font-bold text-white mb-4">Тусламж</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Knowledge Graph</a></li>
+                        <li><a href="#" class="hover:text-white">Түгээмэл асуулт, хариулт</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-sm text-gray-300">
+                    <h4 class="font-bold text-white mb-4">Бидний тухай</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">И-Монгол Академи</a></li>
+                        <li><a href="#" class="hover:text-white">ЦХИХХЯ-ний тухай</a></li>
+                        <li><a href="#" class="hover:text-white">Системийн тухай</a></li>
+                        <li><a href="#" class="hover:text-white">Үйлчилгээний нөхцөл</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-sm text-gray-300">
+                    <h4 class="font-bold text-white mb-4">Хандалтын тоо</h4>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between"><span>Сүүлийн 24 цаг:</span> <span class="text-white">69,587</span></li>
+                        <li class="flex justify-between"><span>Сүүлийн 7 хоног:</span> <span class="text-white">457,663</span></li>
+                        <li class="flex justify-between"><span>Сүүлийн сар:</span> <span class="text-white">2,000,918</span></li>
+                        <li class="flex justify-between"><span>Нийт:</span> <span class="text-white">6,353,263</span></li>
+                    </ul>
+                    <div class="mt-4 flex items-center gap-1 text-gray-400">
+                        <i class="fab fa-google text-yellow-500"></i> Google Analytics
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-xs">
+                &copy; 
             </div>
         </div>
     </footer>
 
-    <!-- MOBILE MENU SCRIPT -->
-    <script>
-        document.querySelector(".menu-btn").onclick = () =>
-            document.querySelector(".nav-links").classList.toggle("show");
-    </script>
-    
-    <!-- Deferred JS example -->
-    <script src="main.js" defer></script>
-    
-    <!-- External SEO-friendly links -->
-    <footer class="external-links" style="padding:20px; text-align:center; background:#f5f5f5; margin-top:40px;">
-        <h2 style="font-size:18px; margin-bottom:10px;">External Resources</h2>
-        <ul style="list-style:none; padding:0; margin:0;">
-            <li><a href="https://developers.google.com/search" target="_blank" rel="noopener">Google Search Developer Docs</a></li>
-            <li><a href="https://schema.org/" target="_blank" rel="noopener">Schema.org Structured Data</a></li>
-            <li><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C Standards</a></li>
-            <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
-            <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
-        </ul>
-    </footer>
+    <div class="fixed bottom-8 right-6 flex flex-col gap-3 z-50">
+        <button class="fab-btn"><i class="fas fa-comment-dots"></i></button>
+        <button class="fab-btn"><i class="fas fa-headset"></i></button>
+        <button class="fab-btn"><i class="fas fa-robot"></i></button>
+        <button class="fab-btn"><i class="fas fa-arrow-up"></i></button>
+    </div>
+
 </body>
 </html>

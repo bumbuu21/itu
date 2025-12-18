@@ -2,52 +2,377 @@
 <html lang="mn">
 <head>
     <meta charset="UTF-8">
-    <title>Танилцуулга</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Mongolia Combined Replica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; }
+        
+        /* Custom Colors based on screenshots */
+        .text-brand { color: #0052CC; }
+        .bg-brand { background-color: #0052CC; }
+        .bg-dark-footer { background-color: #0B1221; }
+        
+        /* Hero Background Simulation */
+        .hero-bg {
+            background: linear-gradient(180deg, #EBF3FF 0%, #FFFFFF 60%, #F8F9FA 100%);
+            position: relative;
+        }
+        /* Subtle silhouette effect at bottom of hero */
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQwIDMyMCI+PHBhdGggZmlsbD0iI2YzZjRmNiIgZmlsbC1vcGFjaXR5PSIxIiBkPSJNMCAyMjRMMTQ0MCAzMjBMMTQ0MCAzMjBMMCAzMjBaIj48L3BhdGg+PC9zdmc+');
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover;
+            z-index: 0;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Б.Бат-Өрнөх</h1>
-        <div class="contact">
-            <p>📧 Имэйл: 22b1num1281@stud.num.edu.mn</p>
-            <p>📞 Утас: 99130584</p>
-            <p>📍 Байршил: Улаанбаатар, Монгол</p>
+<body class="text-slate-700 relative">
+
+    <div class="bg-white border-b border-gray-200 text-xs py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-6 text-gray-500 font-medium">
+                <a href="#" class="hover:text-blue-600">For Foreigners</a>
+                <a href="#" class="hover:text-blue-600">Монгол бичгийн хувилбар</a>
+            </div>
+            <div class="flex space-x-6 text-gray-500 font-medium">
+                <span class="flex items-center gap-1"><i class="fas fa-cloud text-yellow-400"></i> -11.9°C</span>
+                <span class="flex items-center gap-1"><i class="fas fa-dollar-sign text-green-500"></i> Ханш</span>
+                <span class="flex items-center gap-1"><i class="far fa-calendar-alt text-blue-500"></i> 12 сарын 19</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-white py-4 sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <div class="border-2 border-blue-600 rounded-lg px-2 py-0.5 text-2xl font-bold text-blue-600 leading-none">
+                    e<span class="text-slate-800">mongolia</span>
+                </div>
+                <i class="fas fa-moon ml-4 text-slate-400 text-lg"></i>
+            </a>
+
+            <div class="flex items-center space-x-5">
+                <button class="flex flex-col items-center text-[10px] text-gray-600 hover:text-blue-600">
+                    <i class="fas fa-search text-lg mb-1"></i>
+                    Хайлт
+                </button>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-semibold transition flex items-center gap-2 shadow-lg shadow-blue-200">
+                    <i class="far fa-user-circle"></i> Нэвтрэх
+                </button>
+                <button class="p-2 bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center text-blue-600 hover:bg-blue-50">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="p-2 bg-blue-100 rounded-full w-10 h-10 flex items-center justify-center text-blue-600 hover:bg-blue-200">
+                    <i class="fas fa-universal-access"></i>
+                </button>
+            </div>
         </div>
     </header>
 
-    <div class="container">
-        <div class="section">
-            <h2>Намтар</h2>
-            <p>Би компьютерийн ухааны оюутан бөгөөд вэб хөгжүүлэлт, алгоритм, шинэ технологи сурах сонирхолтой.</p>
-        </div>
+    <section class="hero-bg pt-16 pb-32">
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-10 tracking-tight">
+                Төрийн үйлчилгээ, мэдээллийг нэг дороос...
+            </h1>
 
-        <div class="section">
-            <h2>Боловсрол</h2>
-            <ul>
-                <li>Компьютерийн ухааны бакалавр – Монгол Улсын Их Сургууль (2022–2026)</li>
-            </ul>
-        </div>
+            <div class="max-w-4xl mx-auto relative group mb-16">
+                <div class="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none">
+                    <span class="text-blue-400 text-lg font-bold">⌘</span>
+                </div>
+                <input type="text" 
+                       class="w-full pl-14 pr-6 py-4 rounded-full border-2 border-blue-300 focus:border-blue-600 focus:ring-4 focus:ring-blue-100 focus:outline-none shadow-xl text-lg transition placeholder-gray-300" 
+                       placeholder="Үйлчилгээ, хууль, яам, засгийн газрын нэгжүүдээр хайх...">
+            </div>
 
-        <div class="section">
-            <h2>Ур чадвар</h2>
-            <ul>
-                <li>Програмчлал: C, C++, Python</li>
-                <li>Вэб хөгжүүлэлт: HTML, CSS, JavaScript</li>
-                <li>Өгөгдлийн сан: MySQL</li>
-            </ul>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto text-left">
+                <div class="bg-blue-800 rounded-2xl p-6 text-white h-40 relative overflow-hidden group cursor-pointer">
+                    <h3 class="font-bold text-xl relative z-10">Төрийн байгууллагууд</h3>
+                    <button class="mt-4 px-4 py-1 border border-white/50 rounded-full text-sm hover:bg-white hover:text-blue-900 transition relative z-10">Дэлгэрэнгүй</button>
+                    <div class="absolute right-0 bottom-0 opacity-30 w-1/2 h-full bg-cover" style="background-image: url('https://img.icons8.com/ios-filled/100/ffffff/bank-building.png');"></div>
+                </div>
+                 <div class="bg-blue-600 rounded-2xl p-6 text-white h-40 relative overflow-hidden group cursor-pointer">
+                    <h3 class="font-bold text-xl relative z-10">Үйлчилгээ авах</h3>
+                    <button class="mt-4 px-4 py-1 border border-white/50 rounded-full text-sm hover:bg-white hover:text-blue-900 transition relative z-10">Дэлгэрэнгүй</button>
+                    <div class="absolute right-0 bottom-0 opacity-30 w-1/2 h-full bg-cover" style="background-image: url('https://img.icons8.com/ios-filled/100/ffffff/service.png');"></div>
+                </div>
+                 <div class="bg-blue-500 rounded-2xl p-6 text-white h-40 relative overflow-hidden group cursor-pointer">
+                    <h3 class="font-bold text-xl relative z-10">Цахим сургалт</h3>
+                    <button class="mt-4 px-4 py-1 border border-white/50 rounded-full text-sm hover:bg-white hover:text-blue-900 transition relative z-10">Дэлгэрэнгүй</button>
+                    <div class="absolute right-0 bottom-0 opacity-30 w-1/2 h-full bg-cover" style="background-image: url('https://img.icons8.com/ios-filled/100/ffffff/classroom.png');"></div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="section">
-            <h2>Туршлага</h2>
-            <ul>
-                <li>Tech Company-д дадлагажигч – Вэбсайт хийх болон өгөгдлийн сан удирдахад тусалсан.</li>
-            </ul>
-        </div>
+    <section class="py-12 bg-[#F3F5F9]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-slate-800 mb-2">Хялбар хандалт</h2>
+            <p class="text-gray-500 mb-6 text-sm">Хэрэгтэй мэдээлэлдээ хурдан, хялбар замаар хүрээрэй.</p>
 
-        <div class="section">
-            <h2>Хобби</h2>
-            <p>Шатар, Тех блог унших, Хөлбөмбөг тоглох</p>
+            <div class="flex flex-wrap gap-3 mb-16">
+                <a href="#" class="pill-btn">Апостиль гэрчилгээ</a>
+                <a href="#" class="pill-btn">Төлбөр төлөх</a>
+                <a href="#" class="pill-btn">Гэр бүл</a>
+                <a href="#" class="pill-btn">Үл хөдлөх хөрөнгө</a>
+                <a href="#" class="pill-btn">Нийслэлийн цэцэрлэгийн үр дүн</a>
+                <a href="#" class="pill-btn">Зээлийн мэдээлэл</a>
+                <a href="#" class="pill-btn">Нийгмийн даатгалын лавлагаа</a>
+                <a href="#" class="pill-btn">Тээврийн хэрэгслийн торгууль</a>
+                <a href="#" class="pill-btn">Шинжилгээний хариу</a>
+                <a href="#" class="pill-btn">Эмнэлгийн цаг захиалах</a>
+                <a href="#" class="pill-btn">Дипломын тодорхойлолт</a>
+                <a href="#" class="pill-btn">Лавлагаа, тодорхойлолт шалгах</a>
+                <a href="#" class="pill-btn">Нийтийн тээврийн тасалбар захиалга</a>
+            </div>
+
+            <h2 class="text-2xl font-bold text-slate-800 mb-2">Хөтөч</h2>
+            <p class="text-gray-500 mb-6 text-sm">Амьдралынхаа аль ч үед хэрэгтэй бүхнийг хийх, мэдэх хувийн хөтөчтэй байгаарай.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+                <div class="guide-card"><span>Хууль сахиулах</span> <img src="https://img.icons8.com/color/48/police-badge.png" alt="icon"></div>
+                <div class="guide-card"><span>Цэргийн алба</span> <img src="https://img.icons8.com/color/48/military-badge.png" alt="icon"></div>
+                <div class="guide-card"><span>Бичиг баримт</span> <img src="https://img.icons8.com/color/48/documents.png" alt="icon"></div>
+                <div class="guide-card"><span>Хүүхэд</span> <img src="https://img.icons8.com/color/48/toys.png" alt="icon"></div>
+                <div class="guide-card"><span>Гадаад явах</span> <img src="https://img.icons8.com/color/48/around-the-globe.png" alt="icon"></div>
+                <div class="guide-card"><span>Эрүүл мэнддээ анхаарах</span> <img src="https://img.icons8.com/color/48/health-checkup.png" alt="icon"></div>
+                <div class="guide-card"><span>Зээлийн мэдээлэл</span> <img src="https://img.icons8.com/color/48/money-bag.png" alt="icon"></div>
+            </div>
         </div>
+    </section>
+
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800 mb-1">Мэдээ мэдээлэл</h2>
+                    <p class="text-gray-500 text-sm">Өнөөдрийн хамгийн чухал үйл явдлуудыг эндээс уншаарай</p>
+                </div>
+                <button class="bg-gray-100 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-200">Бүгдийг үзэх</button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-1 bg-green-700 rounded-xl overflow-hidden relative h-96 group cursor-pointer">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg" class="absolute w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-500">
+                    <div class="absolute bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent w-full">
+                        <span class="text-xs text-green-300 bg-green-900 px-2 py-1 rounded">Боловсролын яам</span>
+                        <h3 class="text-white font-bold mt-2 text-xl leading-tight uppercase">ХОЛБООНЫ БҮГД НАЙРАМДАХ БРАЗИЛ УЛС...</h3>
+                        <p class="text-gray-300 text-xs mt-2">2025-11-11</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="news-card">
+                        <div class="bg-blue-900 w-24 h-24 rounded-lg flex-shrink-0 flex items-center justify-center text-white text-xs text-center p-1">
+                            POSTER IMG
+                        </div>
+                        <div class="flex flex-col justify-between ml-3 w-full">
+                            <div>
+                                <p class="text-xs text-gray-500 mb-1">Боловсролын ерөнхий газар</p>
+                                <h4 class="font-bold text-slate-800 text-sm line-clamp-2">ТӨРИЙН БОЛОН ОРОН НУТГИЙН БАЙГУУЛЛАГУУД 2025 ОНЫ 01...</h4>
+                            </div>
+                            <div class="flex justify-between items-center text-xs text-gray-400 mt-2">
+                                <span class="flex gap-2"><i class="far fa-thumbs-up"></i> 2 <i class="far fa-thumbs-down"></i></span>
+                                <span>2025-11-10</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="bg-orange-100 w-24 h-24 rounded-lg flex-shrink-0 flex flex-col items-center justify-center text-orange-600 font-bold">
+                            <span class="text-2xl">154</span>
+                        </div>
+                        <div class="flex flex-col justify-between ml-3 w-full">
+                            <div>
+                                <p class="text-xs text-gray-500 mb-1">Онцгой байдлын ерөнхий газар</p>
+                                <h4 class="font-bold text-slate-800 text-sm line-clamp-2">Алба хаагчид 3798 хүний амь нас, 390.2 тэрбум төгрөгийн...</h4>
+                            </div>
+                            <div class="flex justify-between items-center text-xs text-gray-400 mt-2">
+                                <span class="flex gap-2"><i class="far fa-thumbs-up"></i> 0 <i class="far fa-thumbs-down"></i></span>
+                                <span>2025-10-14</span>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="news-card">
+                        <img src="https://via.placeholder.com/100" class="w-24 h-24 rounded-lg object-cover">
+                        <div class="flex flex-col justify-between ml-3 w-full">
+                            <div>
+                                <p class="text-xs text-gray-500 mb-1">И Монгол академи</p>
+                                <h4 class="font-bold text-slate-800 text-sm line-clamp-2">E-Mongolia системийн таван жилийн хөгжил: 2 сая хэрэглэг...</h4>
+                            </div>
+                            <div class="flex justify-between items-center text-xs text-gray-400 mt-2">
+                                <span class="flex gap-2"><i class="far fa-thumbs-up"></i> 1 <i class="far fa-thumbs-down"></i></span>
+                                <span>2025-10-01</span>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="news-card">
+                        <img src="https://via.placeholder.com/100" class="w-24 h-24 rounded-lg object-cover">
+                        <div class="flex flex-col justify-between ml-3 w-full">
+                            <div>
+                                <p class="text-xs text-gray-500 mb-1">И Монгол академи</p>
+                                <h4 class="font-bold text-slate-800 text-sm line-clamp-2">"E-Mongolia"-аас 12 төрлийн лавлагаа тодорхойлолт...</h4>
+                            </div>
+                            <div class="flex justify-between items-center text-xs text-gray-400 mt-2">
+                                <span class="flex gap-2"><i class="far fa-thumbs-up"></i> 2 <i class="far fa-thumbs-down"></i></span>
+                                <span>2025-09-23</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-slate-800 mb-12">Нээлттэй мэдээлэл</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-4">
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-users text-2xl text-slate-600 mb-3"></i>
+                    <div class="text-2xl font-bold text-slate-800">3,544,835</div>
+                    <div class="text-sm text-gray-500">Хүн амын тоо</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-chart-bar text-2xl text-slate-600 mb-3"></i>
+                    <div class="text-2xl font-bold text-slate-800">8.8%</div>
+                    <div class="text-sm text-gray-500">Инфляцын түвшин</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-box text-2xl text-slate-600 mb-3"></i>
+                    <div class="text-2xl font-bold text-slate-800">40.3 их наяд</div>
+                    <div class="text-sm text-gray-500">Дотоодын нийт бүтээгдэхүүн</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-briefcase text-2xl text-slate-600 mb-3"></i>
+                    <div class="text-2xl font-bold text-slate-800">4.5%</div>
+                    <div class="text-sm text-gray-500">Ажилгүйдлийн түвшин</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-horse text-2xl text-slate-600 mb-3"></i>
+                    <div class="text-2xl font-bold text-slate-800">57.6 сая</div>
+                    <div class="text-sm text-gray-500">Малын тоо</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-home text-2xl text-slate-600 mb-3"></i>
+                    <div class="text-2xl font-bold text-slate-800">3.0 сая</div>
+                    <div class="text-sm text-gray-500">Өрхийн дундаж орлого</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-money-bill-wave text-2xl text-slate-600 mb-3"></i>
+                    <div class="text-2xl font-bold text-slate-800">2.4 сая</div>
+                    <div class="text-sm text-gray-500">Дундаж цалин</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-user-hard-hat text-2xl text-slate-600 mb-3"></i>
+                    <div class="text-2xl font-bold text-slate-800">61.9%</div>
+                    <div class="text-sm text-gray-500">Ажиллах хүчний оролцоо</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark-footer text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="border-2 border-white rounded-lg px-2 py-0.5 text-2xl font-bold text-white leading-none">
+                            e<span class="text-white">mongolia</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button class="bg-black border border-gray-600 rounded px-3 py-1 flex items-center gap-2 text-xs">
+                            <i class="fab fa-apple text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-[8px]">Download on the</div>
+                                <div class="font-bold">App Store</div>
+                            </div>
+                        </button>
+                        <button class="bg-black border border-gray-600 rounded px-3 py-1 flex items-center gap-2 text-xs">
+                            <i class="fab fa-google-play text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-[8px]">GET IT ON</div>
+                                <div class="font-bold">Google Play</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="text-sm text-gray-300">
+                    <h4 class="font-bold text-white mb-4">Тусламж</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Knowledge Graph</a></li>
+                        <li><a href="#" class="hover:text-white">Түгээмэл асуулт, хариулт</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-sm text-gray-300">
+                    <h4 class="font-bold text-white mb-4">Бидний тухай</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">И-Монгол Академи</a></li>
+                        <li><a href="#" class="hover:text-white">ЦХИХХЯ-ний тухай</a></li>
+                        <li><a href="#" class="hover:text-white">Системийн тухай</a></li>
+                        <li><a href="#" class="hover:text-white">Үйлчилгээний нөхцөл</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-sm text-gray-300">
+                    <h4 class="font-bold text-white mb-4">Хандалтын тоо</h4>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between"><span>Сүүлийн 24 цаг:</span> <span class="text-white">69,587</span></li>
+                        <li class="flex justify-between"><span>Сүүлийн 7 хоног:</span> <span class="text-white">457,663</span></li>
+                        <li class="flex justify-between"><span>Сүүлийн сар:</span> <span class="text-white">2,000,918</span></li>
+                        <li class="flex justify-between"><span>Нийт:</span> <span class="text-white">6,353,263</span></li>
+                    </ul>
+                    <div class="mt-4 flex items-center gap-1 text-gray-400">
+                        <i class="fab fa-google text-yellow-500"></i> Google Analytics
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-xs">
+                &copy; 
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-8 right-6 flex flex-col gap-3 z-50">
+        <button class="bg-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-slate-800 hover:text-blue-600 transition">
+            <i class="fas fa-comment-dots text-xl"></i>
+        </button>
+        <button class="bg-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-slate-800 hover:text-blue-600 transition">
+            <i class="fas fa-headset text-xl"></i>
+        </button>
+        <button class="bg-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-slate-800 hover:text-blue-600 transition">
+            <i class="fas fa-robot text-xl"></i>
+        </button>
+        <button class="bg-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-slate-800 hover:text-blue-600 transition">
+            <i class="fas fa-arrow-up"></i>
+        </button>
     </div>
+
+    <style>
+        .pill-btn {
+            apply px-5 py-3 bg-white rounded-full shadow-sm border border-gray-200 text-gray-600 text-sm hover:shadow-md hover:text-blue-600 hover:border-blue-200 transition whitespace-nowrap;
+        }
+        .guide-card {
+            apply bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between hover:shadow-md transition cursor-pointer text-slate-800 font-semibold;
+        }
+        .news-card {
+            apply bg-white border border-gray-100 p-3 rounded-xl flex items-start hover:shadow-md transition cursor-pointer;
+        }
+    </style>
+
 </body>
 </html>

@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding-top: 20px;
+}
+
+#chessboard-container {
+    width: 60vh; /* Responsive size */
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    border: 5px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh; /* Size for the piece icons */
+    cursor: pointer;
+}
+
+/* Color the squares */
+.light {
+    background-color: #f0d9b5; /* Light wood color */
+}
+
+.dark {
+    background-color: #b58863; /* Dark wood color */
+}
+
+/* Highlight for selection and potential moves */
+.selected {
+    border: 3px solid #ff0000; /* Red border for selected piece */
+    box-sizing: border-box;
+}
+
+.move-highlight {
+    background-color: rgba(0, 255, 0, 0.4); /* Green highlight for moves */
+}
+
+#game-info {
+    margin: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
