@@ -1,8 +1,6 @@
-// script.js
-
-// 1. DATA: Add your hollow image URLs here!
+// data
 const imageList = [
-    "img/1.png",  // This points to your first image
+    "img/1.png", 
     "img/2.png",
     "img/3.png",
     "img/4.png",
@@ -27,33 +25,22 @@ let isPainting = false;
 let currentColor = '#FF6B6B';
 let currentBackgroundImg = null;
 
-
-
-// Function to set canvas resolution based on screen size
-
-
-// Call it once at start
-
-
 // 3. SCREEN SWITCHING LOGIC
 function showScreen(screenId) {
     // Hide all screens
     document.querySelectorAll('.screen').forEach(screen => {
         screen.style.display = 'none';
     });
-    // Show the target screen
     document.getElementById(screenId).style.display = 'flex';
 
-    // If going to gallery, build it
     if(screenId === 'gallery-screen') {
         renderGallery();
     }
 }
 
-// 4. GALLERY LOGIC
 function renderGallery() {
     const container = document.getElementById('imageGallery');
-    container.innerHTML = ''; // Clear old content
+    container.innerHTML = ''; 
 
     imageList.forEach(imgUrl => {
         const div = document.createElement('div');
@@ -69,8 +56,8 @@ function selectPicture(url) {
     img.src = url;
     
     img.onload = () => {
-        currentBackgroundImg = img; // Store the image for later
-        resetCanvasWithImage();     // Use a helper function to draw it
+        currentBackgroundImg = img; 
+        resetCanvasWithImage();    
         showScreen('paint-screen');
     };
 }
@@ -110,7 +97,6 @@ function draw(e) {
     ctx.moveTo(pos.x, pos.y);
 }
 
-// Listeners
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mousemove', draw);
 window.addEventListener('mouseup', stopDrawing);
@@ -120,16 +106,13 @@ canvas.addEventListener('touchend', stopDrawing);
 
 function changeColor(c) { currentColor = c; }
 function clearCanvas() {
-    // 1. Wipe everything
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    // 2. If we have a background image, put it back immediately
     if (currentBackgroundImg) {
         ctx.drawImage(currentBackgroundImg, 0, 0, canvas.width, canvas.height);
     }
 }
 
-// Helper function to handle the initial draw
 function resetCanvasWithImage() {
     clearCanvas();
 }
