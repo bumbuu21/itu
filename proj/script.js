@@ -11,7 +11,7 @@ const imageList = [
     "img/7.png",
     "img/8.png",
     "img/9.png",
-    "img/10.png"
+   
 ];
 
 // 2. SETUP

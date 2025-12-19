@@ -127,7 +127,7 @@ canvas { position: absolute; top: 0; left: 0; border-radius: 15px; }
     justify-content: center;
     
     /* 1. This points to your home background image */
-    background-image: url('img/home-bg.png'); 
+    background-image: url('img/121.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -155,3 +155,70 @@ canvas { position: absolute; top: 0; left: 0; border-radius: 15px; }
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
+body {
+    /* Link to your image here */
+    background-image: url('img/12.png');
+    
+    /* Make sure the image covers the whole screen */
+    background-size: cover;
+    
+    /* Center the image */
+    background-position: center;
+    
+    /* Keep the image fixed so it doesn't scroll with the page */
+    background-attachment: fixed;
+    
+    /* Stop the image from repeating like tiles */
+    background-repeat: no-repeat;
+    
+    /* A fallback color in case the image doesn't load */
+    background-color: #87CEEB; /* Sky blue */
+    
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Fun font for kids */
+    margin: 0;
+    padding: 0;
+}
+
+/* Add a white, slightly see-through background to the main screens */
+.hero, .grid-container, .paint-nav, .ui-container {
+    background-color: rgba(255, 255, 150, 0.95); /* 0.85 makes it slightly transparent */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners look friendlier */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds a pop-out effect */
+    max-width: 800px; /* Keeps things from getting too wide */
+    margin: 20px auto; /* Centers the box */
+}
+
+/* Style for the main container of the gallery screen */
+#gallery-screen {
+    /* Set a maximum width and center the content to match the home screen's layout */
+    max-width: 800px; 
+    margin: 50px auto;
+    padding: 20px; /* Padding for the space around the heading and grid */
+}
+
+/* Style for the heading text */
+#gallery-screen h2 {
+    /* Apply the white background frame effect */
+    background-color: rgba(255, 255, 150, 1.0); 
+    padding: 15px 25px; /* Vertical and horizontal padding */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for lift */
+    display: inline-block; /* Makes the background fit the width of the text */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Style for the back button */
+.btn-back {
+    /* Ensure the button is visible and styled nicely */
+    background-color: #FFD700; /* A friendly color like gold/yellow */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
